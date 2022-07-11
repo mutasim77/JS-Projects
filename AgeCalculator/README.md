@@ -1,2 +1,2 @@
 # Age Calculator
-![pic](https://user-images.githubusercontent.com/96326525/178339827-a6dc6f12-fd0e-4421-8a0f-4c2a2b652546.png)
+![pic](https://user-images.githubusercontent.com/96326525/178351525-31ef2771-a26a-4eee-8d7a-35bd2dcc8d13.png)
