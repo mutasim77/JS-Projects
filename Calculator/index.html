@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/calc.png">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="charge"></div>
+            <div class="lan"></div>
+            <div class="line"></div>
+            <div class="result">0</div>
+            <div class="content">
+                <div class="buttons">
+
+                    <div class="row-1 row-gray">
+                        <div class="AC"><a href="#!">AC</a></div>
+                        <div class="clear" ><a href="#!"> << </a></div>
+                        <div class="module" onclick="myFunction('.module')"><a href="#!">%</a></div>
+                        <div class="divide" onclick="myFunction('.divide')"><a href="#!">/</a></div>
+                    </div>
+
+                    <div class="row-1">
+                        <div class="seven" onclick="myFunction('.seven')"><a href="#!">7</a></div>
+                        <div class="eight" onclick="myFunction('.eight')"><a href="#!">8</a></div>
+                        <div class="nine" onclick="myFunction('.nine')"><a href="#!">9</a></div>
+                        <div class="product" onclick="myFunction('.product')"><a href="#!">x</a></div>
+                    </div>
+
+                    <div class="row-1">
+                        <div class="four" onclick="myFunction('.four')"><a href="#!">4</a></div>
+                        <div class="five" onclick="myFunction('.five')"><a href="#!">5</a></div>
+                        <div class="six" onclick="myFunction('.six')"><a href="#!">6</a></div>
+                        <div class="minus" onclick="myFunction('.minus')"><a href="#!">-</a></div>
+                    </div>
+
+                    <div class="row-1">
+                        <div class="one" onclick="myFunction('.one')"><a href="#!">1</a></div>
+                        <div class="two" onclick="myFunction('.two')"><a href="#!">2</a></div>
+                        <div class="three" onclick="myFunction('.three')"><a href="#!">3</a></div>
+                        <div class="plus" onclick="myFunction('.plus')"><a href="#!">+</a></div>
+                    </div>
+
+                    <div class="row-1">
+                        <div id="zero" class="zero" onclick="myFunction('.zero')"><a href="#!">0</a></div>
+                        <div class="dot" onclick="myFunction('.dot')"><a href="#!">.</a></div>
+                        <div class="equal"><a href="#!">=</a></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <script src="js/sprict.js" type="text/javascript"></script>
+</body>
+
+</html>
