@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +7,26 @@
 }
 
 body {
-    background-color: rgb(28, 188, 145);
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(31, 173, 135);
+    background: linear-gradient(-45deg, #00ffd5, #03fc90, #0dc6de, #22b075, #06b5a6, #0c8e7f, #0aa9d1, #0b6163, #48f5ec);
+    background-size: 300% 300%;
+    animation: glow 20s ease infinite;
+}
+
+/* live background */
+@keyframes glow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .header {
@@ -85,7 +106,7 @@ hr {
 /* Conctainer names */
 .now-name {
     display: flex;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     margin-top: 10px;
     margin-left: 20px;
@@ -95,6 +116,30 @@ hr {
 .now-name div:not(:last-child) {
     margin-right: 40px;
 }
-.now-name div:nth-child(3){
-    margin-right: 50px;
+
+.now-name div:nth-child(3) {
+    margin-right: 55px;
+}
+
+.container-1 {
+    height: 50px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    box-shadow: 0 0 0;
+    border-radius: 0;
+    border: 0;
+    text-align: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.container-3 {
+    margin-top: 30px;
+}
+
+.container-3 p {
+    background-color: rgb(0, 0, 0);
+    padding: 0 15px;
+    border-radius: 7px;
+    color: #fff;
 }
