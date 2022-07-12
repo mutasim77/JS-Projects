@@ -1,9 +1,3 @@
-// const calculator = setInterval(function () {
-
-
-// });
-
-
 function myFunction(name) {
     let result = document.querySelector('.result');
     console.log((result.textContent.length))

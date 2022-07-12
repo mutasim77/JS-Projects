@@ -6,9 +6,9 @@ document.querySelector('.today-year').innerHTML = todaysYear; //2022
 const todaysMonth = new Date().getMonth(); //to get correct the month we add +1 ; cause' month in js starts from 0
 document.querySelector('.today-month').innerHTML = todaysMonth + 1 + '-';
 if (todaysMonth < 10) {
-    document.querySelector('.today-month').innerHTML = '0' + todaysMonth + '-';
+    document.querySelector('.today-month').innerHTML = '0' + (1 + todaysMonth) + '-';
 } else {
-    document.querySelector('.today-month').innerHTML = todaysMonth + '-';
+    document.querySelector('.today-month').innerHTML = 1 + todaysMonth + '-';
 }
 
 //Today's day
@@ -22,7 +22,7 @@ if (todaysDay < 10) {
 
 
 //My b'day
-const myBirthDay = new Date(2003, 9, 3);
+const myBirthDay = new Date(2003, 3, 9);
 // const birthYear = new Date(2003, 09, 03).getFullYear();
 const birthYear = myBirthDay.getFullYear();
 document.querySelector('.birth-year').innerHTML = birthYear;
@@ -74,7 +74,9 @@ var start = setInterval(function () {
 
     //hour
     document.querySelector('.now-hour').innerHTML = hours;
+    //minutes
     document.querySelector('.now-minute').innerHTML = minutes;
+    //seconds
     document.querySelector('.now-seconds').innerHTML = seconds;
 
 }, 1000);
