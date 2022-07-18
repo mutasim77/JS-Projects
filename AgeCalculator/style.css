@@ -143,3 +143,12 @@ hr {
     border-radius: 7px;
     color: #fff;
 }
+
+
+@media (max-width: 700px){
+    body{
+       animation-play-state: paused;
+    }
+}
+
+
