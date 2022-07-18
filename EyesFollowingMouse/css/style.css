@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff676; 
+}
+
+.minion {
+    background: url(../img/minion.png) no-repeat;
+    background-size: cover;
+    width: 350px;
+    height: 550px;
+    margin-top: 150px;
+
+}
+
+.eyes {
+    display: flex;
+    justify-content: center;
+    margin-top: 95px;
+}
+
+.eye {
+    width: 80px;
+    height: 65px;
+    margin: 20px;
+}
+
+.ball {
+    background: url(../img/eye.png)no-repeat;
+    background-size: cover;
+    width: 45px;
+    height: 45px;
+    transform: translate(10%, 20%);
+}
