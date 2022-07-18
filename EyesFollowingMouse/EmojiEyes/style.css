@@ -1,0 +1,93 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #876bff;
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.column {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+
+}
+
+.face-div{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: gold;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #010101;
+}
+.face-div::before{
+    content: '';
+    position: absolute;
+    top: 140px;
+    width: 85px;
+    height: 35px;
+    background: #b57700;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    transition: 0.5s;
+}
+.face-div:hover::before{
+	top: 140px;
+	width: 95px;
+	height: 20px;
+	border-radius: 7px;
+	background: #b57700;
+}
+
+.eyes-div{
+	position: relative;
+	top: -40px;
+	display: flex;
+}
+.eyes-div .eye{
+	position: relative;
+	width: 65px;
+	height: 65px;
+	display: block;
+	background: #fff;
+	margin: 0 15px;
+	border-radius: 50%;
+}
+.eyes-div .eye::before{
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 25px;
+	transform: translate(-50%, -50%);
+	width: 25px;
+	height: 25px;
+	background: #333;
+	border-radius: 50%;
+}
+.face-div a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 100%;
+}
+
+
+
+
+
+
