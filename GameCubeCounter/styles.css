@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+  background: linear-gradient(#35cbc1, #32bd3b);
+}
+
+.app {
+  background: #fff;
+  padding: 20px;
+  width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 1px 30px 0 rgba(0, 0, 0, 0.14), 0 0px 0px 0 rgba(0, 0, 0, .12), 0 0px 0px 0px rgba(0, 0, 0, .3);
+  border-radius: 10px;
+}
+
+.app__header {
+  padding: 20px;
+  text-align: center;
+}
+
+.app__content {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.app__footer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.input label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 3px;
+  color: #acacac;
+  font-family: GothamPro, sans-serif;
+  font-size: .8rem;
+  font-weight: normal;
+  line-height: 1.2rem;
+}
+
+.input input {
+  display: block;
+  width: 100%;
+  max-height: 2.8rem;
+  padding: .8rem 1rem;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: 1.4;
+  color: #000;
+  background: #fff none;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+.game {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  background: #ccc;
+  min-height: 300px;
+  min-width: 300px;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.hide {
+  display: none !important;
+}
+
+.btn {
+  position: absolute;
+  z-index: 1;
+  display: inline-block;
+  padding: 1rem 2.3rem;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-family: GothamPro, sans-serif;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background: #fad64e;
+  color: #3f3f3f;
+  border: none;
+  border-radius: 2.8rem;
+  transition: transform .2s ease-in-out, box-shadow .2s ease-in-out, -webkit-transform .2s ease-in-out, -webkit-box-shadow .2s ease-in-out;
+  will-change: transform;
+}
+
+.btn:disabled {
+  background: #ccc !important;
+  border: 1px solid #ccc;
+  color: #000;
+  cursor: not-allowed;
+}
+
+.btn:active {
+  transition: transform .1s ease-in-out, box-shadow .1s ease-in-out !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.btn:hover {
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, .2);
+  transform: translateY(-1px);
+}

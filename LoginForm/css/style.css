@@ -1,0 +1,158 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+
+/* #002469 */
+/* #4fa7ff */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* color: #fff; */
+    /* background-color: #000; */
+}
+
+.header {
+    margin-top: 50px;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.container-login {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    gap: 40px;
+}
+
+
+.img img {
+    width: 750px;
+}
+
+.login {
+    padding: 10px;
+    border: 1px solid #002469;
+    /* border */
+    width: 350px;
+    border-radius: 10px;
+    height: 450px;
+    margin-top: 40px;
+}
+
+.login-text {
+    color: #002469;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.login-text span {
+    /* color: #021f55; */
+    font-size: 22px;
+}
+
+
+.login-subtext {
+    text-align: center;
+    font-size: 19px;
+    color: #4fa7ff;
+}
+
+.login-subtext span {
+    color: #4fa7ff;
+    font-weight: 500;
+}
+
+
+.login-input {
+    /* border: 1px solid #000; */
+    /* text-align: center; */
+    margin: 0 auto;
+    /* max-width: 200px; */
+    margin-top: 45px;
+}
+
+.login-input:not(:first-child) {
+    margin-left: 20px;
+}
+
+.login-id {
+    display: block;
+    font-size: 15px;
+}
+
+.login-id label {
+    opacity: 0.5;
+}
+
+.login-id input {
+    border-bottom: 1px solid #000;
+    margin-top: 5px;
+    width: 220px;
+}
+
+
+.login-id {
+    margin-top: 25px;
+}
+
+.login-forgot {
+    font-size: 14px;
+    text-align: end;
+    opacity: 0.7;
+    margin-top: 20px;
+}
+
+.login-forgot a {
+    color: #4fa7ff;
+
+}
+
+.login-btn {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn {
+    border: 1px solid #000;
+    border-radius: 7px;
+    font-size: 20px;
+    background-color: #02286e;
+    color: #fff;
+    padding: 5px 40px;
+}
+
+.login-email {
+    font-size: 11px;
+    text-align: end;
+    align-items: center;
+    margin-top: 55px;
+
+}
+
+.login-email a {
+    color: #4fa7ff;
+}
+
+.light-mode {
+    display: none;
+}
+
+.dark-mode {
+    width: 35px;
+    height: 33px;
+    background-color: red;
+    border: 1px solid #000;
+    border-radius: 10px;
+    background: url(../img/dark-mode.png) center no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    margin-top: -33px;
+    margin-left: 89%;
+    transition: all 0.7s ease;
+}
+
+.dark-mode:hover {
+    transform: scale(1.1);
+}
