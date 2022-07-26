@@ -1,0 +1,44 @@
+@media (max-width: 768px) {
+    .container {
+        margin-top: 50%;
+        width: 70%;
+        height: 50%;
+    }
+
+    .text {
+        font-size: 1.7em;
+    }
+
+    .cube {
+        width: 45px;
+        height: 45px;
+    }
+
+    .cube:first-child::after {
+        top: 20%;
+        left: 28%;
+        font-size: .7em;
+    }
+
+    .cube:nth-child(2)::after {
+        top: 20%;
+        left: 49%;
+        font-size: .7em;
+    }
+
+    .cube:nth-child(3)::after {
+        top: 20%;
+        left: 70.5%;
+        font-size: .7em;
+    }
+
+    .btn {
+        padding: 5px 15px;
+        border-radius: 7px;
+        font-size: 0.7em;
+    }
+
+    .footer {
+        font-size: .3em;
+    }
+}

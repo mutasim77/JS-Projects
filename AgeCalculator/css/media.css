@@ -1,0 +1,38 @@
+@media (max-width: 768px) {
+    .container {
+        margin-top: 55%;
+        text-align: center;
+    }
+
+    .text {
+        font-size: 1.5em;
+    }
+
+    .line hr {
+        width: 150px;
+    }
+
+    .dates label {
+        font-size: .7em;
+    }
+
+    .dates {
+        gap: 10px;
+    }
+
+    .dates input {
+        font-size: .5em;
+        width: 80%;
+        height: 50%;
+    }
+
+    .btn {
+        font-size: .5em;
+        padding: 3px 15px;
+        border-radius: 7px;
+    }
+
+    .result {
+        font-size: .5em;
+    }
+}
