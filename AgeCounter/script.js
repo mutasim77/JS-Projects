@@ -50,17 +50,42 @@ var start = setInterval(function () {
     const birth = new Date(2003, 3, 9);
     const now = new Date();
 
+    let currentYear = now.getFullYear();
+    let currentMonth = now.getMonth() + 1; // month
+    let currentDate = now.getDate();
+    
 
-    //year
-    const years = now.getFullYear() - birth.getFullYear(); // years
+    //if days greater
+    if(birth.getDate() > currentDate){
+        currentDate = 31 + currentDate - birth.getDate();
+        currentMonth = currentMonth - 1;
+        console.log(currentMonth, currentDate);
+
+        if(currentMonth < 0){
+            currentMonth = 11;
+            currentYear = currentYear - 1;
+        }
+
+    } else {
+        currentDate = currentDate - birth.getDate();
+    }
+
+    //if month greater
+    if(birth.getMonth() > currentMonth){
+        currentMonth = currentMonth + 12;
+        currentYear = currentYear - 1;
+    }
+
+    //years
+    const years = currentYear - birth.getFullYear(); // years
     document.querySelector('.now-year').innerHTML = years;
-
     //month
-    const month = ((now.getMonth() + 1) - birth.getMonth()); // month
+    let month = currentMonth - birth.getMonth();
     document.querySelector('.now-month').innerHTML = month;
 
     //days
-    const days = now.getDate() - birth.getDate(); // days
+    const days = currentDate; // days
+    console.log(currentDate)
     document.querySelector('.now-days').innerHTML = days;
 
     //
