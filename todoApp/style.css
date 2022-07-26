@@ -9,7 +9,6 @@
 body {
     background: linear-gradient(rgb(0, 242, 255), rgb(162, 0, 255));
     font-family: 'Poppins', sans-serif;
-
 }
 
 .section {
@@ -18,7 +17,6 @@ body {
     border: 1px solid rgb(244, 241, 241);
     margin: 0 auto;
     margin-top: 10%;
-    /* display: flex; */
     justify-content: center;
     align-items: center;
     text-align: center;
