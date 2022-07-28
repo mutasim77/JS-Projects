@@ -1,4 +1,4 @@
-# Clock
-<img width="770" alt="clock" src="https://user-images.githubusercontent.com/96326525/180935236-ad39c874-359a-4550-ae67-c16f1c461680.png">
+# Word Counter
+<img width="714" alt="wordCounter" src="https://user-images.githubusercontent.com/96326525/181607520-96b34778-d18e-46bc-96df-2dcdfeec8061.png">
 
 
