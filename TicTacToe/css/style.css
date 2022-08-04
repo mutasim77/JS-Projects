@@ -1,0 +1,135 @@
+@import 'reset.css';
+
+body {
+    background: rgb(224, 177, 133);
+    font-family: 'Philosopher', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5em;
+    width: 500px;
+    height: 595px;
+    border: 1px solid #000;
+    justify-content: center;
+    margin-top: 7%;
+    padding: 65px 0 70px 0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #000;
+    position: relative;
+}
+
+.games-name {
+    font-size: 2.5em !important;
+    margin: 3% 0;
+
+}
+
+.players {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 1.5em;
+    gap: 70px;
+}
+
+.row {
+    display: flex;
+}
+
+.row>* {
+    border: 1px solid #000;
+    font-size: 2em;
+    margin-right: .5em;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.message {
+    font-size: 2em;
+    margin: 5% 0;
+}
+
+.btn {
+    border: 1px solid rgb(243, 170, 101);
+    padding: 7px 25px;
+    border-radius: 10px;
+    background: rgb(243, 170, 101);
+    box-shadow: -2px -2px 10px #000;
+}
+
+.btn:hover {
+    border: 1px solid rgb(0, 0, 0);
+    background: rgb(0, 0, 0);
+    color: #fff;
+    box-shadow: -2px -2px 7px #000;
+}
+
+.btn:active {
+    box-shadow: 0 0 0 #000;
+}
+
+.column:hover {
+    cursor: pointer;
+    background: rgb(237, 199, 163);
+}
+
+.column.disable,
+.column.column.disable:hover {
+    background: rgb(161 224 176);
+    pointer-events: none;
+
+}
+
+.column.disable2,
+.column.column.disable2:hover {
+    background: rgb(109 164 194);
+    pointer-events: none;
+}
+
+.column:active {
+    background: rgb(243, 170, 101);
+}
+
+.result {
+    position: absolute;
+    width: 360px;
+    height: 345px;
+    border: 1px solid rgb(243, 170, 101);
+    top: 122px;
+    left: 60px;
+    border-radius: 30px;
+    background: rgb(243, 170, 101);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.result.draw {
+    position: absolute;
+    width: 360px;
+    height: 345px;
+    border: 1px solid rgb(237 199 163);
+    top: 122px;
+    left: 60px;
+    border-radius: 30px;
+    background: rgb(237 199 163);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.result.hide {
+    display: none;
+}
