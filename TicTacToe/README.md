@@ -1,4 +1,4 @@
-# Clock
-<img width="770" alt="clock" src="https://user-images.githubusercontent.com/96326525/180935236-ad39c874-359a-4550-ae67-c16f1c461680.png">
+# Tic-Tac-Toe
+<img width="676" alt="tictactoe" src="https://user-images.githubusercontent.com/96326525/182918663-502f030c-608e-4a87-aa03-75eaf9a00fea.png">
 
 
