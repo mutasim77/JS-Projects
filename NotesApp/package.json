@@ -1,0 +1,33 @@
+{
+  "name": "js-todoapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx webpack --mode=production",
+    "dev": "npx webpack --mode=development",
+    "start": "npx webpack-dev-server --mode=development --open"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "Mutasim",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.18.9",
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "babel-loader": "^8.2.5",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-config": "^7.5.0",
+    "webpack-dev-server": "^4.9.3"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/solid.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/fontawesome.css">
+  <link rel="stylesheet" href="https://unpkg.com/mustard-ui@latest/dist/css/mustard-ui.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>JS Prepare</title>
+</head>
+
+<body>
+  <header id="header">
+    <h1 class="title">БЛОГ 001001</h1>
+    <h2 class="subtitle">Создавайте статьи и добавляйте их в избранное</h2>
+    <button class="get-started button button-primary button-large js-header-start">Приступить</button>
+  </header>
+
+  <section class="container w-container">
+    <ul class="tabs" id="navigation">
+      <li><a class="tab " href="#" data-name="posts">Посты</a></li>
+      <li><a class="tab active" href="#" data-name="create">Создать</a></li>
+      <li><a class="tab" href="#" data-name="favorite">Избранное</a></li>
+    </ul>
+
+    <div class="loader-wrap hide" id="loader">
+      <div class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <form id="create">
+      <h1 class="h4">Создать новый пост</h1>
+
+      <div class="form-control">
+        <label>Название</label>
+        <input type="text" name="title" placeholder="Введите название">
+      </div>
+
+      <div class="form-control">
+        <label>Текст</label>
+        <textarea name="fulltext" placeholder="Введите текст поста"></textarea>
+      </div>
+
+      <div class="form-control">
+        <label>Тип</label>
+        <select name="type">
+          <option value="note" selected>Заметка</option>
+          <option value="news">Новость</option>
+        </select>
+      </div>
+
+      <button class="button-primary button-round button-shadow" type="submit">Создать</button>
+    </form>
+    <div id="posts" class="hide"></div>
+    <div id="favorite" class="hide"></div>
+
+  </section>
+</body>
+
+</html>
