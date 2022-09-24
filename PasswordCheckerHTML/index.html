@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Checker</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section>
+        <h1> Here enter your password!</h1>
+        <div class="row">
+            <label for="email" class="first">Email</label>
+            <input type="email" id="email" required pattern="[A-Za-z0-9]+@[a-z]+\.[a-z]+[a-z]"
+                placeholder="Enter you email">
+        </div>
+        <div class="row">
+            <label for="password">Password</label>
+            <input type="password" id="password" required minlength="8" placeholder="Enter you password">
+            <div class="show-password"></div>
+        </div>
+        <a href="" class="btn">Submit</a>
+    </section>
+
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

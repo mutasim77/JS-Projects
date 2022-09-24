@@ -1,0 +1,16 @@
+@import 'reset.css';
+
+
+body {
+    background: url('../img/galaxy.jpg') no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+#image {
+    width: 10%;
+    position: absolute;
+    z-index: 100;
+    top: 45%;
+    right: 45%;
+}

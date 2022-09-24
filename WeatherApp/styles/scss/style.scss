@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+@import '../css/reset.css';
+@import './mainInfo';
+
+@mixin line($width, $left) {
+    content: '';
+    width: $width;
+    height: 1px;
+    background-color: rgb(138, 138, 138);
+    position: absolute;
+    left: $left;
+    bottom: 0;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: linear-gradient(#2f95a2, rgb(48, 62, 143));
+}
+
+.container{
+    width: 300px;
+    margin: 0 auto;
+    background: #fff;
+    color: #000;
+    border-radius: 7px;
+    padding: 20px;
+}
+
+.container.hide{
+    display: none;
+}
+
+.container-hide1.hide, .container2-hide.hide{
+    display: none;
+}
+
+.app-name {
+    font-size: 1.5em;
+    color: #2f95a2;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &::after{
+        @include line(300px, -20px);
+    }
+
+    .bx-left-arrow-alt{
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+}
+.message {
+    background-color: rgb(245, 167, 167);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0 0 0 ;
+    text-align: center;
+    font-size: .9em;
+    color: rgb(91, 43, 43);
+    display: none;
+}
+
+
+.form{
+    position: relative;
+    input{
+        border: 2px solid #2f95a2;
+        padding: 7px 20px;
+        width: 100%;
+        border-radius: 5px;
+        margin: 20px 0 30px 0 ;
+        text-align: center;
+        &:focus{
+            border-color: #4ac2d1;
+        }
+
+
+    }
+    &::before{
+        @include line(100%, 0);
+    }
+
+    &::after{
+        content: "or";
+        width: 16px;
+        height: 18px;
+        color: rgb(157, 155, 155);
+        background-color: #fff;
+        position: absolute;
+        bottom: -4px;
+        left: 115px;
+    }
+}
+
+.btn{
+    margin-top: 25px;
+    padding: 10px 20px;
+    background-color: #399aa7;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+
+    &:hover{
+        background-color: #51bcca;
+    }
+
+    &:active{
+        background-color: #399aa7;
+    }
+}
+

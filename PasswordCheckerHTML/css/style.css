@@ -1,0 +1,98 @@
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
+
+body {
+    background-color: rgba(0, 0, 0, 0.9);
+    font-family: 'Poppins', sans-serif;
+    color: rgb(0, 255, 47);
+}
+
+section {
+    margin: 0 auto;
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+section h1 {
+    font-size: 1.3em;
+}
+
+header {
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+input {
+    border: 1px solid rgb(0, 255, 47);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.first {
+    margin-right: 30px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    gap: 20px;
+    position: relative;
+}
+
+.btn {
+    padding: 10px 30px;
+    border: 1px solid rgb(0, 255, 47);
+    border-radius: 7px;
+    margin-top: 10px;
+    position: relative;
+    background-color: rgb(0, 255, 47);
+    color: #000;
+}
+
+.btn:hover {
+    color: rgba(87, 85, 85, 0.9);
+}
+
+input:valid {
+    border-color: rgb(0, 255, 47);
+    color: rgb(0, 255, 47);
+}
+
+input:invalid {
+    border-color: red;
+    color: red;
+}
+
+input::placeholder {
+    font-size: 0.8em;
+    color: rgb(162, 162, 162);
+}
+
+.show-password {
+    position: absolute;
+    border: 1px solid rgb(0, 255, 47);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    right: 0;
+}
+
+.show-password::before {
+    content: '';
+    width: 20%;
+    height: 20%;
+    position: inherit;
+    background-color: #fff;
+    top: 12px;
+    left: 11px;
+    border-radius: 50%;
+}
+
+.show-password:hover {
+    cursor: pointer;
+}
