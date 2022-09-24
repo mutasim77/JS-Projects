@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieMania</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="shortcut icon" href="img/png-fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- header  -->
+    <header class="header">
+        <div class="header-container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">MovieMania</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#" id="header-movies">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="movies-button">Movies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" id="cartoon-button">Cartoons</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link watchlist-close" href="#"><i class="fa-solid fa-bookmark"></i>
+                                    Watchlist</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" id="form">
+                            <div class="search-div">
+                                <input class="search" placeholder="Search">
+                                <button class="search-btn" type="button"><i
+                                        class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                            <div class="log-in">Sign in
+                                <i class="fa-solid fa-right-to-bracket"></i>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- banner  -->
+    <section class="banner">
+        <div class="container">
+            <div class="banner-card">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/batman.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <div class="card-info blue">
+                                    <div class="genre">
+                                        <i class="fa-solid fa-film"></i>
+                                        <span>Action/Adventure</span>
+                                    </div>
+                                    <div class="year">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <span>2022</span>
+                                    </div>
+                                    <div class="duration">
+                                        <i class="fa-solid fa-clock"></i>
+                                        <span>2h 56m</span>
+                                    </div>
+                                </div>
+                                <h2 class="card-title blue">The Batman</h2>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/inception.png" class="d-block w-100" alt="inception"
+                                style="object-position: center;">
+                            <div class="carousel-caption d-none d-md-block">
+                                <div class="card-info white">
+                                    <div class="genre">
+                                        <i class="fa-solid fa-film"></i>
+                                        <span>Action/Sci-fi</span>
+                                    </div>
+                                    <div class="year">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <span>2010</span>
+                                    </div>
+                                    <div class="duration">
+                                        <i class="fa-solid fa-clock"></i>
+                                        <span>2h 28m</span>
+                                    </div>
+                                </div>
+                                <h2 class="card-title">Inception</h2>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/interstellar.png" class="d-block w-100" alt="intersteller"
+                                style="object-position: center">
+                            <div class="carousel-caption d-none d-md-block">
+                                <div class="card-info blue">
+                                    <div class="genre">
+                                        <i class="fa-solid fa-film"></i>
+                                        <span>Sci-fi/Adventure</span>
+                                    </div>
+                                    <div class="year">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <span>2014</span>
+                                    </div>
+                                    <div class="duration">
+                                        <i class="fa-solid fa-clock"></i>
+                                        <span>2h 49m</span>
+                                    </div>
+                                </div>
+                                <h2 class="card-title blue">Interstellar</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- filter  -->
+    <section class="filter">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="text-center fs-3 fw-lighter">Hey buddy, here you can see some details about movies
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- movies  -->
+    <section class="movies">
+        <div class="container">
+
+            <div class="row action">
+                <div class="col-12">
+                    <h2>Action</h2>
+                </div>
+                <div class="movies-grid">
+                </div>
+            </div>
+
+            <div class="row horror">
+                <div class="col-12">
+                    <h2>Horror</h2>
+                </div>
+                <div class="movies-grid">
+                </div>
+            </div>
+
+            <div class="row animation">
+                <div class="col-12">
+                    <h2>Cartoons</h2>
+                </div>
+                <div class="movies-grid">
+                    <div class="slider">
+                        <div class="slider-track">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row war">
+                <div class="col-12">
+                    <h2>War/Drama</h2>
+                </div>
+                <div class="movies-grid">
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    <!-- details  -->
+    <div class="movies-detail hide"></div>
+
+    <!-- watchlist  -->
+    <section class="watchlist hide">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mt-5 mb-5 d-flex justify-content-end align-items-center">
+                    <h1 class="fs-1">Your Watchlist <i class="fa-solid fa-bookmark"></i></h1>
+                    <button type="button" class="btn-watchlist"><i class="fa-solid fa-x"></i></button>
+                </div>
+                <div class="row delete-me">
+                    <div class="col-12 text-center mt-5 d-flex fw-lighter" style="padding-right: 80px;">
+                        <h1 class="fs-1">Your WatchList is empty!</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- search info  -->
+    <section class="search-info hide">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center fs-1 mt-5 mb-5"></h2>
+                </div>
+                <div class="row d-flex align-items-center justify-content-center">
+                </div>
+            </div>
+    </section>
+
+    <!-- footer  -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <h1 class="fs-1 ">MovieMania</h1>
+                    <p>Movies & TV Shows, Online cinema, <br> Movie database HTML Template.</p>
+                    <ul class="d-flex social-media">
+                        <li><i class="fa-brands fa-facebook"></i></li>
+                        <li><i class="fa-brands fa-twitter"></i></li>
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                        <li><i class="fa-brands fa-tiktok"></i></li>
+                        <li><i class="fa-brands fa-youtube"></i></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <h1 class="mb-3">MovieMania</h1>
+                    <ul>
+                        <li>Home</li>
+                        <li>Movies</li>
+                        <li>Cartoons</li>
+                        <li>About us</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <h1>Help</h1>
+                    <ul>
+                        <li>Account & Billing</li>
+                        <li>Plans & Pricing</li>
+                        <li>Supported devices</li>
+                        <li>Accessibility</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center mt-5 fw-lighter me-3">
+                &copy;copyright 2022 MovieMania
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS scrpits  -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+@media(max-width: 1200px) {
+    .animation {
+        display: none;
+    }
+
+    .movies-detail {
+        left: 15px;
+    }
+
+}
+
+
+@media(max-width: 478px) {
+    .search-card {
+        margin-right: 0;
+    }
+
+    .search-info .row {
+        margin: 0;
+    }
+
+    .watchlist .fw-lighter {
+        padding-right: 0 !important;
+    }
+
+}
+
+@media(max-width: 1000px) {
+    .navbar-light .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    .navbar-light .navbar-toggler {
+        color: rgb(255 255 255 / 10%);
+        border-color: rgb(255 255 255 / 50%);
+    }
+
+    .footer {
+        margin-left: 0;
+    }
+
+    .footer .me-3 {
+        margin-right: 1em !important;
+    }
+}
