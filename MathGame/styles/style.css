@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+    outline: none;
+}
+
+*::selection{
+    background-color: #fb6525;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    background-color: #ffd22d;
+}
+
+.container, .result-part{
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 15%;
+    padding: 50px;
+}
+
+.container{
+    position: relative;
+    padding-bottom: 80px;
+}
+
+.container.hide, .result-part.hide{
+    display: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-column{
+    flex-direction: column;
+    align-items: center;
+}
+
+.text{
+    text-transform: capitalize;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.main{
+    background-color: #ccc;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 2em;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.input{
+    background-color: transparent;
+    border: none;
+    width: 55px;
+    border-bottom: 2px solid #000;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.input:focus{
+    border-color: #fbc500;
+}
+
+.btn{
+    background-color: #ffd22d;
+    padding: 12px 40px;
+    border: 1px solid #000;
+    cursor: pointer;
+    box-shadow: -1px -1px 3px #000;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.btn:is(:active){
+    background-color: #fbc500;
+    box-shadow: 0px 0px 0px #000;
+}
+
+
+/* hide part  */
+
+.result-part.center{
+    background-color: transparent;
+    color: #fff;
+}
+
+.result-part.center .btn{
+    background-color: #fff;
+}
+
+.center{
+    text-align: center;
+}
+
+.hidetext{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* error  */
+.error{
+    position: absolute;
+    bottom: 0;
+    left: 33%;
+    padding: 5px 30px;
+    font-size: 0.7em;
+    color: #fff;
+    background-color: #fc7f59;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.error.hide{
+    display: none;
+}
