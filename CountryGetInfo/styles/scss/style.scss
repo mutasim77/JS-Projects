@@ -1,0 +1,122 @@
+@import '../css/reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+
+body{
+	font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+}
+
+::placeholder{
+    color: rgb(212, 212, 212, 0.7);
+    font-size: .9em;
+}
+
+.container{
+    background-color: #272727;
+    width: 500px;
+    margin: 10% auto 0;
+    padding: 40px 50px;
+    border: 1px solid #1fc9e4;
+    box-shadow: -3px -3px 10px #1fc9e4;
+    line-height: 1.9;
+    border-radius: 7px;
+
+    .flex{
+        display: flex;
+        justify-content: center;
+    }
+
+    input{
+        border: 1px solid #1fc9e4;
+        background-color: #505050;
+        padding: 7px 70px 7px 10px;
+        border-radius: 5px;
+        margin-right: 10px;
+        box-shadow: -2px -2px 5px #1392a6;
+    }
+
+    .btn{
+        padding: 7px 15px;
+        background-color: #1fc9e4;
+        border-radius: 5px;
+        box-shadow: -2px -2px 5px #1392a6;
+        position: relative;
+        &:is(:active){
+            background-color: #1392a6;
+            box-shadow: 0px 0px 0px #1392a6;
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            border: 1px solid transparent;
+            border-top-color: red;
+            border-bottom-color: #fff;
+            border-radius: 50%;
+            right: -60px;
+            bottom: 0;
+            animation: loader 5s linear infinite;
+            cursor: default;
+            @keyframes loader {
+                from{
+                    transform: rotate(0);
+                }
+                to{
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+
+    .btn.hide::after{
+        content: none;
+    }
+
+    .center{
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    .error{
+        font-size: 1em;
+        background-color: #f36f6f;
+        text-align: center;
+        display: table;
+        margin: 0 auto;
+        margin-top: 30px;
+        padding: 3px 7px;
+        border-radius: 7px;
+
+        &.hide{
+            display: none;
+        }
+    }
+}
+
+.info{
+    img{
+        display: flex;
+        width: 250px;
+        margin: 50px auto 30px;
+    }
+
+
+    > div {
+        > span{
+            font-weight: 400;
+            color: #ccc;
+        }
+    }
+}
+
+@media only screen and(max-width: 767px){
+    .container{
+        margin-top: 40%;
+        width: 400px;
+    }
+}
