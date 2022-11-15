@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #6c2f82;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 10% auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0px 0px 10px #000;
+  border-radius: 10px;
+}
+.container .text {
+  font-size: 1.5em;
+  font-weight: 500;
+  text-align: center;
+}
+.container input {
+  width: 70px;
+  padding: 20px 0;
+  margin: 25px 0;
+  font-size: 1.6em;
+  text-align: center;
+  color: #6c2f82;
+  font-weight: 700;
+  border: 2px solid #6c2f82;
+  border-radius: 10px;
+}
+.container input:is(:active, :focus) {
+  outline: none;
+}
+.container .btn {
+  background-color: #6c2f82;
+  border: none;
+  padding: 0.7em 1.5em;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  box-shadow: -2px -2px 7px #000;
+}
+.container .btn:is(:active) {
+  background-color: #5c1c74;
+  box-shadow: 0px 0px 5px #000;
+}
+.container .num-of-guesses {
+  margin: 5px 0;
+}
+.container .reset.hide, .container .btn.hide {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    margin-top: 40%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .container {
+    margin-top: 60%;
+  }
+  .container .text {
+    font-size: 1em;
+  }
+  .container input {
+    width: 50px;
+    padding: 13px 0;
+    font-size: 1.1em;
+  }
+  .container input::placeholder {
+    font-size: 0.7em;
+  }
+  .container .btn {
+    padding: 0.4em 1.1em;
+    font-size: 0.7em;
+  }
+  .container .info, .container .num-of-guesses, .container .guessed-numbers {
+    font-size: 0.8em;
+  }
+}/*# sourceMappingURL=style.css.map */

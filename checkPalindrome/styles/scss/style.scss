@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #9a34f4;
+    color: #9a34f4;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+::placeholder{
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    max-width: 450px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin: 20% auto 0;
+    padding: 25px ;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 10px #000;
+    position: relative;
+    border-radius: 10px;
+    input{
+        border: none;
+        border-bottom: 2px solid #9a34f4;
+        padding: 10px 5px;
+        width: 200px;
+        &:is(:active, :focus){
+            outline: none;
+        }
+    }
+
+    .flex{
+        min-width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .btn{
+        background-color: #9a34f4;
+        color: #fff;
+        padding: .4em 1.5em;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: -2px -2px 5px #000;
+
+        &:active{
+            box-shadow: 0 0 0 0;
+        }
+    }
+
+    .info{
+        margin-top: 20px;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 500px;
+        border: 5px solid rgb(87, 87, 87);
+        border-bottom: 5px solid rgb(0, 191, 255);
+        border-top: 5px solid rgb(233, 62, 179);
+        border-left:5px solid rgb(255, 191, 0);
+        height: 500px;
+        border-radius: 50%;
+        z-index: -1;
+        animation: rotat 500ms infinite linear;
+        @keyframes rotat {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+@media only screen and(max-width: 1024px){
+    .container{
+        margin-top: 50%;
+    }
+}
+
+@media only screen and(max-width: 767px){
+    .container{
+        margin-top: 90%;
+
+        &::after{
+            display: none;
+        }
+    }
+}
+
+
+
+
