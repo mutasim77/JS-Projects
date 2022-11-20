@@ -98,7 +98,7 @@
 body {
   font-family: "Poppins", sans-serif;
   user-select: none;
-  background: url("img/main1.gif") no-repeat;
+  background: url("../css/img/main1.gif") no-repeat;
   background-size: cover;
   height: 85vh;
 }
@@ -110,17 +110,17 @@ body.web {
 }
 
 body.anime {
-  background: url("/img/anime.jpeg") no-repeat;
+  background: url("../css/img/anime.jpeg") no-repeat;
   background-size: cover;
 }
 
 body.marvel {
-  background: url("/img/marvel.jpg") no-repeat;
+  background: url("../css/img/marvel.jpg") no-repeat;
   background-size: cover;
 }
 
 body.web {
-  background: url("/img/web.webp") no-repeat;
+  background: url("../css/img/web.webp") no-repeat;
   background-size: cover;
 }
 
