@@ -73,7 +73,7 @@ function createCards(filePath, array) {
             <img src="img/${filePath}/${item}" alt="${filePath}">
         </div>
         <div class="back-card">
-            <img src="/img/qustion.gif" alt="question.gif">
+            <img src="img/qustion.gif" alt="question.gif">
         </div>
         `
         document.querySelector('.container').appendChild(element);
