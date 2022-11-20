@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="styles/css/style.css">
+    <link rel="shortcut icon"
+        href="https://play-lh.googleusercontent.com/iGpvIraXfFPS7fcEIThbznRFvBgAHZT6F19NPaiXwp4V-9beEgXSgaEzJtg99GAQ8dg"
+        type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- Start Page -->
+    <main>
+        <div class="container-start">
+            <div class="game-name">Memory Game</div>
+            <div class="welcome-text">
+                Heey! Welcome there, <br>
+                before starting the game enter your name and choose the game theme
+            </div>
+            <div class="user-name">
+                <label for="name">Player Name: </label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+            <div class="game-categories">
+                <button><img class="anime" src="img/anime.png" alt="anime"></button>
+                <button><img class="marvel" src="img/marvel.png" alt="marvel"></button>
+                <button><img class="web" src="img/web.png" alt="web"></button>
+            </div>
+            <div class="header">
+                <button class="btn" id="start">Start</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Game Page  -->
+    <main class="hide">
+        <div class="name-animate"> Good Luck! <span></span> 😉</div>
+        <div class="header">
+            <div class="moves">Moves: <span>0</span></div>
+            <div class="buttons">
+                <button class="btn" id="restart">Reset</button>
+            </div>
+            <div class="timer">Time : <span>00:00</span></div>
+        </div>
+        <div class="container"></div>
+    </main>
+
+    <script type="module" src="js/script.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>

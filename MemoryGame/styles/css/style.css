@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap");
+.container-start {
+  max-width: 700px;
+  border: 1px solid #000;
+  margin: 10% auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  border-radius: 20px;
+  background-color: rgba(199, 199, 199, 0.7);
+  border: 1px solid #fff;
+}
+.container-start .game-name {
+  font-size: 2em;
+  letter-spacing: 4px;
+  font-weight: 500;
+}
+.container-start .welcome-text {
+  margin: 10px 0 50px 0;
+  line-height: 1.7;
+}
+.container-start .user-name {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.container-start .user-name input {
+  padding: 0.5em 2em 0.5em 0.5em;
+  border: 2px solid #000;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.container-start .user-name input:is(:active, :focus) {
+  outline: none;
+  border-color: #fff;
+}
+.container-start .game-categories {
+  margin: 60px 0 35px 0;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container-start .game-categories button {
+  width: 170px;
+  height: 120px;
+  cursor: pointer;
+  border-radius: 7px;
+  outline: none;
+  position: relative;
+  border: 5px solid transparent;
+  box-shadow: 0px 3px 10px #000;
+  transition: all 0.7s ease;
+}
+.container-start .game-categories button:hover {
+  transform: translateY(-1em);
+  box-shadow: 0px 15px 10px #000;
+}
+.container-start .game-categories button:focus {
+  border: 5px solid rgb(255, 0, 0);
+}
+.container-start .game-categories button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+}
+.container-start .game-categories button::after {
+  content: "Marvel";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #000;
+  font-size: 1.5em;
+  top: -30px;
+  left: 0;
+  z-index: -1;
+}
+.container-start .game-categories button:first-child::after {
+  content: "Anime";
+}
+.container-start .game-categories button:last-child::after {
+  content: "Web";
+}
+.container-start .header {
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+  background: url("/img/main1.gif") no-repeat;
+  background-size: cover;
+  height: 85vh;
+}
+
+body.anime,
+body.marvel,
+body.web {
+  height: auto;
+}
+
+body.anime {
+  background: url("/img/anime.jpeg") no-repeat;
+  background-size: cover;
+}
+
+body.marvel {
+  background: url("/img/marvel.jpg") no-repeat;
+  background-size: cover;
+}
+
+body.web {
+  background: url("/img/web.webp") no-repeat;
+  background-size: cover;
+}
+
+body.hide {
+  background: url("/img/main2.gif") no-repeat;
+  background-position: center;
+}
+
+main.hide {
+  display: none;
+}
+
+.container {
+  max-width: 950px;
+  min-height: 657px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto 0;
+  gap: 15px;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: rgba(199, 199, 199, 0.5);
+  padding: 3% 0;
+  border: 1px solid #fff;
+  margin-bottom: 15px;
+}
+
+.header {
+  max-width: 850px;
+  margin: 3% auto 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .timer, .header .moves {
+  font-size: 2em;
+  color: #fff;
+  font-weight: 600;
+}
+.header .buttons {
+  display: flex;
+  gap: 35px;
+}
+.header .btn {
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  padding: 0.4em 1.5em;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid #000;
+  color: #fff;
+  background-color: #000000;
+  box-shadow: 2px 2px 2px #000;
+  position: relative;
+  z-index: 1;
+}
+.header .btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  border-radius: 7px;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.header .btn:hover {
+  color: #000;
+}
+.header .btn:hover::after {
+  width: 100%;
+  left: 0;
+}
+.header .btn:active {
+  box-shadow: 0 0 0 #000;
+}
+
+.memory-card {
+  width: 131px;
+  height: 131px;
+  position: relative;
+  border-radius: 5px;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: all 0.7s ease;
+  cursor: pointer;
+  box-shadow: -2px -2px 7px #000, 1px 1px 2px #000;
+}
+.memory-card:active {
+  transform: scale(0.5);
+}
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+.memory-card.flip.found {
+  background-color: red;
+}
+.memory-card .front-card, .memory-card .back-card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 7px;
+  backface-visibility: hidden;
+  text-align: center;
+  border: 1px solid transparent;
+}
+.memory-card .front-card img, .memory-card .back-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+}
+.memory-card .front-card {
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: rotateY(180deg);
+  border-color: #fff;
+}
+
+.name-animate {
+  color: #fff;
+  margin: 10px 0;
+  font-size: 1.5em;
+  font-weight: 600;
+  animation: animate-text 15s infinite linear;
+}
+@keyframes animate-text {
+  0%, 100% {
+    transform: translateX(0em);
+  }
+  50% {
+    transform: translate(48em);
+  }
+}
+
+@media (max-width: 1024px) {
+  .name-animate {
+    animation: none;
+  }
+}/*# sourceMappingURL=style.css.map */
