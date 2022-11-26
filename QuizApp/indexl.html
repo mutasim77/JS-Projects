@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles/css/style.css">
+    <link rel="shortcut icon"
+        href="https://play-lh.googleusercontent.com/nEkaONSbM77kYNP6MxP_dl5_8qmOA0IX8FNLI9HlR0jdn5uW7on44GK2xgAZhkuoFqQ"
+        type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- App name and timer  -->
+        <div class="flex">
+            <div class="app-name">Quiz App</div>
+            <div class="timer"><i class="fa fa-clock"></i> <span>30</span>s</div>
+        </div>
+        <!-- question section  -->
+        <div class="questions-section">
+            <!-- quistion  -->
+            <div class="question">1.What does HTML stand for?</div>
+
+            <!-- options  -->
+            <div class="options-section">
+                <div class="option flex">
+                    <div class="option-name">Hyper Text Preprocessor</div>
+                </div>
+                <div class="option flex">
+                    <div class="option-name">Hyper Text Markup Language</div>
+                </div>
+                <div class="option flex">
+                    <div class="option-name">Hyper Text Multiple Language</div>
+                </div>
+                <div class="option flex">
+                    <div class="option-name">Hyper Tool Multi Language</div>
+                </div>
+            </div>
+        </div>
+        <!-- foot section => button -->
+        <div class="flex">
+            <div class="count-questions">1 of 5 Questions</div>
+            <button class="btn">Next</button>
+        </div>
+
+        <!-- modal window (Results) -->
+        <div class="modal-window">
+            <div class="picture">
+                <img src="https://www.pngkey.com/png/full/124-1249472_1st-place-trophy-png-animated-medals-and-trophies.png"
+                    alt="trophy">
+            </div>
+            <div class="text">Quiz Completed!</div>
+            <div class="info"><span>3</span> correct answers out of <span>5</span></div>
+            <div class="result-status">It's a great result</div>
+            <button class="btn" id="restart">Restart</button>
+        </div>
+
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="module" src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700&display=swap");
+@import '../css/reset.css';
+body {
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  background: linear-gradient(270deg, #702ab6, #d832cb);
+}
+
+::selection {
+  background-color: #9f4df1;
+  color: #fff;
+}
+
+.container {
+  max-width: 650px;
+  margin: 10% auto 0;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px #000;
+  padding: 25px;
+  box-shadow: -20px -20px 30px #98238f, 20px 20px 30px #702ab6;
+  background-color: #fff;
+  position: relative;
+}
+.container .timer {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.container .timer i {
+  margin-right: 10px;
+}
+.container .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .flex:first-child {
+  border-bottom: 1px solid #000;
+  padding-bottom: 15px;
+}
+.container .flex:last-child {
+  border-top: 1px solid #000;
+  padding-top: 15px;
+}
+.container .app-name {
+  font-size: 1.5em;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.container .questions-section {
+  margin: 30px 0;
+}
+.container .questions-section .question {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.container .questions-section .option {
+  padding: 10px 15px;
+  border: 1px solid #0084ff;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #daeaf9;
+}
+.container .questions-section .option .option-name {
+  pointer-events: none;
+}
+.container .questions-section .option.green {
+  background-color: #b8f0c5;
+  border-color: #2ea80f;
+}
+.container .questions-section .option.red {
+  background-color: #f9d7da;
+  border-color: #ff0000;
+}
+.container .questions-section .option:not(:last-child) {
+  margin-bottom: 20px;
+}
+.container .questions-section .option .fa-solid.fa-xmark {
+  color: #ff0000;
+  border: 2px solid #ff0000;
+  padding: 3px 8px;
+  border-radius: 50%;
+}
+.container .questions-section .option .fa-solid.fa-check {
+  color: #2ea80f;
+  border: 2px solid #2ea80f;
+  padding: 3px;
+  border-radius: 50%;
+}
+.container .btn {
+  padding: 0.4em 1em;
+  background-color: #d832cb;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.container .btn:active {
+  transform: translate(1px, 1px);
+  background-color: #964fdd;
+}
+
+.modal-window {
+  position: absolute;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  background-color: #60e9a4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0;
+  border-radius: 20px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  box-shadow: -2px -2px 15px #000;
+  display: none;
+}
+.modal-window .picture {
+  max-width: 100px;
+}
+.modal-window .picture img {
+  width: 100%;
+}
+.modal-window #restart {
+  background-color: #408cf6;
+}
+.modal-window .text {
+  font-weight: 500;
+  font-size: 1.2em;
+  margin: 15px 0;
+}
+.modal-window .info span {
+  font-weight: 700;
+}
+.modal-window .info, .modal-window .info-about-score {
+  font-style: italic;
+}
+.modal-window .btn {
+  margin-top: 15px;
+  font-weight: 500;
+  box-shadow: 2px 2px 2px #000;
+}
+.modal-window .btn:active {
+  box-shadow: 1px 1px 1px #000;
+}
+.modal-window.active {
+  animation: animate 0.4s 1 linear;
+}
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) scale(0.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}/*# sourceMappingURL=style.css.map */
