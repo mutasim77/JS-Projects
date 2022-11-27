@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account</h1>
+                <input type="text" placeholder="Username" />
+                <input type="email" placeholder="Email" />
+                <input type="password" id="password" placeholder="Password" />
+                <input type="password" id="confirm-password" placeholder="Confirm Password" />
+                <input type="date" placeholder="Enter your Age" style="padding: 20px;">
+                <div style="display: flex; align-items: center;">
+                    <label for="">Gender: </label>
+                    <div style="display: flex; align-items: center;">
+                        <input type="radio" id="male" name="check">
+                        <label for="male">Male</label>
+                    </div>
+                    <div style="display: flex;  align-items: center;">
+                        <input type="radio" id="female" name="check">
+                        <label for="female">Female</label>
+                    </div>
+                    <div style="display: flex;  align-items: center;">
+                        <input type="radio" id="female" name="check">
+                        <label for="female">Others</label>
+                    </div>
+                </div>
+                <button>Sign Up</button>
+                <p id="message">.</p>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your account</span>
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <a href="#">Forgot your password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal details</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hi There!</h1>
+                    <p>Enter your personal details to open an account with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script src="js/script.js" charset="utf-8"></script>
+</body>
+
+</html>
