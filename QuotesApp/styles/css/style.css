@@ -9,17 +9,72 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+::selection {
+  background: #a368d4;
+  color: #fff;
+}
+
 .container {
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: 5px;
   border-radius: 20px;
-  margin-top: 15%;
-  padding: 20px;
+  margin-top: 17%;
+  padding: 25px 40px;
 }
 .container h1 {
   text-align: center;
   font-weight: 500;
+}
+.container p {
+  display: inline;
+  letter-spacing: 1px;
+}
+.container .flex {
+  display: flex;
+}
+.container .justify-between {
+  justify-content: space-between;
+}
+.container .author {
+  margin: 15px 0;
+  text-align: end;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #999;
+  font-style: italic;
+}
+.container button {
+  cursor: pointer;
+}
+.container .btn {
+  border-radius: 50%;
+  padding: 10px 11px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #a368d4;
+  color: #a368d4;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+}
+.container .btn:hover {
+  border-color: #fff;
+  color: #fff;
+  background: #a368d4;
+}
+.container .btn:not(:last-child) {
+  margin-right: 10px;
+}
+.container #change-quote {
+  border: 1px solid #fff;
+  background: #a368d4;
+  color: #fff;
+  border-radius: 20px;
+  padding: 0.2em 1em;
+  transition: all 0.3s ease;
+}
+.container #change-quote:hover {
+  color: #a368d4;
+  background: rgba(255, 255, 255, 0.85);
+  border-color: #a368d4;
 }/*# sourceMappingURL=style.css.map */

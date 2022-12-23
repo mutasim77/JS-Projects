@@ -4,23 +4,78 @@
     margin: 0
     padding: 0
 
-$border: rgba(255, 255, 255, 0.40)
-$background: rgba(255, 255, 255, 0.55)
+$border: #fff
+$background: rgba(255, 255, 255, 0.85)
 
 body
     background-image: url('../../img/img.jpg')
     font-family: 'Poppins', sans-serif
 
+::selection
+    background: #a368d4
+    color: $border
+
 .container
-    max-width: 600px
+    max-width: 500px
     margin: 0 auto
     border: 1px solid $border
     background: $background
     backdrop-filter: 5px
     border-radius: 20px
-    margin-top: 15%
-    padding: 20px
+    margin-top: 17%
+    padding: 25px 40px
 
     h1
         text-align: center
         font-weight: 500
+    p
+        display: inline
+        letter-spacing: 1px
+
+    .flex
+        display: flex
+
+    .justify-between
+        justify-content: space-between
+
+    .author
+        margin: 15px 0
+        text-align: end
+        padding-bottom: 10px
+        border-bottom: 1px solid #999
+        font-style: italic
+
+        span
+
+    button
+        cursor: pointer
+
+    .btn
+        border-radius: 50%
+        padding: 10px 11px
+        background: $background
+        border: 1px solid #a368d4
+        color: #a368d4
+        font-size: 1.1em
+        transition: all .3s ease
+
+        &:hover
+            border-color: $border
+            color: $border
+            background: #a368d4
+
+        &:not(:last-child)
+            margin-right: 10px
+
+    #change-quote
+        border: 1px solid $border
+        background: #a368d4
+        color: $border
+        border-radius: 20px
+        padding: .2em 1em
+        transition: all .3s ease
+
+        &:hover
+            color: #a368d4
+            background: $background
+            border-color: #a368d4
