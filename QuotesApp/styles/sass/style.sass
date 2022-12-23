@@ -1,11 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap')
+
 *
     margin: 0
     padding: 0
 
-// $background:
+$border: rgba(255, 255, 255, 0.40)
+$background: rgba(255, 255, 255, 0.55)
+
 body
     background-image: url('../../img/img.jpg')
+    font-family: 'Poppins', sans-serif
 
 .container
-    max-width: 700px
-    margin: 0
+    max-width: 600px
+    margin: 0 auto
+    border: 1px solid $border
+    background: $background
+    backdrop-filter: 5px
+    border-radius: 20px
+    margin-top: 15%
+    padding: 20px
+
+    h1
+        text-align: center
+        font-weight: 500
