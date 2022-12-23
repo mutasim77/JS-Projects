@@ -7,6 +7,7 @@
 body {
   background-image: url("../../img/img.jpg");
   font-family: "Poppins", sans-serif;
+  background-repeat: no-repeat;
 }
 
 ::selection {
@@ -22,11 +23,13 @@ body {
   backdrop-filter: 5px;
   border-radius: 20px;
   margin-top: 17%;
-  padding: 25px 40px;
+  padding: 35px 40px;
+  position: relative;
 }
 .container h1 {
   text-align: center;
   font-weight: 500;
+  margin-bottom: 7px;
 }
 .container p {
   display: inline;
@@ -39,9 +42,9 @@ body {
   justify-content: space-between;
 }
 .container .author {
-  margin: 15px 0;
+  margin: 20px 0;
   text-align: end;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   border-bottom: 1px solid #999;
   font-style: italic;
 }
@@ -77,4 +80,27 @@ body {
   color: #a368d4;
   background: rgba(255, 255, 255, 0.85);
   border-color: #a368d4;
+}
+.container .message {
+  font-size: 0.7em;
+  position: absolute;
+  bottom: 10px;
+  right: 37%;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: green;
+  background: rgba(163, 104, 212, 0.1);
+}
+.container .message.hide {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    margin-top: 50%;
+  }
+  .message {
+    bottom: 4px !important;
+    right: 31% !important;
+  }
 }/*# sourceMappingURL=style.css.map */
