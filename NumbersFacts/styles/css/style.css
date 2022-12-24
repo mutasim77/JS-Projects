@@ -1,1 +1,78 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgba(63, 94, 251, 0.7);
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 10%;
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 50px;
+  box-shadow: -2px -2px 15px #000, 1px 1px 5px #000;
+}
+.container h1 {
+  font-weight: 500;
+}
+.container p {
+  font-size: 0.8em;
+  margin-bottom: 15px;
+}
+
+.row {
+  flex-direction: column;
+  display: inline-flex;
+  gap: 10px;
+}
+.row input {
+  padding: 0.8em 3em 0.8em 0.7em;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 0.8em 3em;
+  color: white;
+  border: 1px solid #000;
+  background-color: #0092ed;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:is(:hover) {
+  background-color: #4256ac;
+}
+.btn:active {
+  background-color: #5489aa;
+}
+
+.fact-desc {
+  max-width: 250px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  margin-top: 35px;
+  text-align: start;
+  padding: 20px;
+  border-radius: 10px;
+}
+.fact-desc h4 {
+  font-weight: 500;
+  margin-bottom: 0.8em;
+}
+.fact-desc .btn {
+  margin-top: 1em;
+  padding: 0.5em 0.6em;
+}
+
+.message {
+  color: green;
+  margin-top: 1.5em;
+}/*# sourceMappingURL=style.css.map */
