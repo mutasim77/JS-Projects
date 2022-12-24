@@ -14,7 +14,7 @@ body {
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
-  margin-top: 10%;
+  margin-top: 7%;
   border-radius: 15px;
   background-color: #fff;
   padding: 50px;
@@ -73,6 +73,14 @@ body {
 }
 
 .message {
-  color: green;
   margin-top: 1.5em;
+  display: none;
+}
+.message.error {
+  color: red;
+  display: inherit;
+}
+.message.copied {
+  color: green;
+  display: inherit;
 }/*# sourceMappingURL=style.css.map */

@@ -13,7 +13,7 @@ body
     max-width: 400px
     margin: 0 auto
     text-align: center
-    margin-top: 10%
+    margin-top: 7%
     border-radius: 15px
     background-color: #fff
     padding: 50px
@@ -65,5 +65,12 @@ body
         padding: .5em .6em
 
 .message
-    color: green
     margin-top: 1.5em
+    display: none
+
+    &.error
+        color: red
+        display: inherit
+    &.copied
+        color: green
+        display: inherit
