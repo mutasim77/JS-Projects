@@ -7,7 +7,18 @@
 
 body
     font-family: "Poppins", sans-serif
-    background-color: #eff3ff
+    background-color: #ffcb03
+    overflow: hidden
+
+    &::after
+        content: url('https://www.freepnglogos.com/uploads/pokemon-png/pokemon-png-pikachu-pictures-images-28.png')
+        width: 100px
+        height: 100px
+        position: absolute
+        top: 16%
+        left: 0%
+        z-index: -1
+        filter: blur(7px)
 
 .header
     background-color: #484848
@@ -15,12 +26,73 @@ body
     justify-content: center
     align-content: center
     padding: 10px 0
-
+    box-shadow: 0 20px 50px #000
     img
         width: 250px
 
 .container
-    border: 1px solid #000
     max-width: 350px
     margin: 0 auto
-    margin-top: 7%
+    margin-top: 5%
+
+    .card
+        border-radius: 10px
+        padding: 30px 20px
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15)
+        background: radial-gradient(circle at 50% 0%, #00b894 36%, #ffffff 36%)
+
+        .hp
+            background-color: #fff
+            width: 80px
+            padding: 7px 10px
+            text-align: center
+            border-radius: 20px
+            margin-left: auto
+
+            span
+                font-weight: 600
+    img
+        width: 180px
+        display: flex
+        margin: 20px auto
+
+    .name
+        font-weight: 700
+        letter-spacing: 1px
+        font-size: 1.4em
+        text-align: center
+
+    .types
+        margin: 25px 0
+        display: flex
+        justify-content: space-around
+
+        span
+            background-color: #00b894
+            color: #fff
+            padding: .2em 1em
+            border-radius: 20px
+    .list
+        display: flex
+        justify-content: space-between
+        text-align: center
+
+    .btn
+        background: #00b894
+        border-style: none
+        padding: .7em 1em
+        border-radius: 10px
+        display: flex
+        margin: 0 auto
+        margin-top: 20px
+        font-size: .9em
+        color: #fff
+        font-weight: 600
+        letter-spacing: 1.5px
+        box-shadow: -2px -2px 5px #000
+        transition: all .3s ease
+        cursor: pointer
+
+        &:active
+            box-shadow: 0 0 0 #000
+            transform: translate(-.3em, -.3em)
