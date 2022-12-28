@@ -7,5 +7,14 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: red;
+}
+
+.header {
+  background-color: #484848;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.header img {
+  width: 250px;
 }/*# sourceMappingURL=sytle.css.map */
