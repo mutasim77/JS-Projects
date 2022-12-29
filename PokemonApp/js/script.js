@@ -20,6 +20,7 @@ const API = 'https://pokeapi.co/api/v2/pokemon/';
 const card = document.querySelector('.card')
 const btn = document.querySelector('.btn')
 
+//! While click button
 btn.addEventListener('click', () => {
     let id = Math.floor(Math.random() * 150) + 1;
     let URL = API + id;
@@ -30,34 +31,33 @@ btn.addEventListener('click', () => {
         })
 })
 
-//! Create Cards 
+//! Create Cards each time when button clicked;
 function createCard(data) {
     let name = data.name;
     let image = data.sprites.other.dream_world.front_default;
     let themeColor = data.types[0].type.name;
+    let hp = data.stats[0].base_stat;
+    let attack = data.stats[1].base_stat;
+    let deffence = data.stats[2].base_stat;
+    let speed = data.stats[5].base_stat;
 
     card.innerHTML =
         `
-        <div class="hp">
-        <span>HP</span>
-            30
-        </div>
+        <div class="hp"><span>HP </span>${hp}</div>
         <img src="${image}" alt="image">
         <div class="name">${name}</div>
-        <div class="types">
-
-        </div>
+        <div class="types"></div>
         <div class="list">
             <div class="attack">
-                <h3>85</h3>
+                <h3>${attack}</h3>
                 <p>Attack</p>
             </div>
             <div class="deffence">
-                <h3>90</h3>
+                <h3>${deffence}</h3>
                 <p>Defense</p>
             </div>
             <div class="speed">
-                <h3>90</h3>
+                <h3>${speed}</h3>
                 <p>Speed</p>
             </div>
         </div>
@@ -68,14 +68,16 @@ function createCard(data) {
 
 //! Add the Types
 function addTypes(type) {
-    let span = document.createElement('span');
     type.forEach(item => {
+        let span = document.createElement('span');
         span.innerText = item.type.name;
         document.querySelector('.types').appendChild(span);
     })
 }
 
-//! Change Background 
-function bgColor(color) {
-    console.log(color);
+//! Change Background and set color for types
+function bgColor(type) {
+    let color = typeColor[type];
+    card.style.background = `radial-gradient(circle at 50% 0%, ${color} 36%, #ffffff 36%)`;
+    document.querySelectorAll('.types span').forEach(item => { item.style.backgroundColor = `${color}` });
 }

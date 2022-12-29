@@ -9,16 +9,11 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #ffcb03;
   overflow: hidden;
-}
-body::after {
-  content: url("https://www.freepnglogos.com/uploads/pokemon-png/pokemon-png-pikachu-pictures-images-28.png");
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 16%;
-  left: 0%;
-  z-index: -1;
-  filter: blur(7px);
+  background: #ffcb03 url("https://www.freepnglogos.com/uploads/pokemon-png/pokemon-png-pikachu-pictures-images-28.png") no-repeat;
+  background-size: 100%;
+  background-position: top;
+  backdrop-filter: blur(7px);
+  height: 100vh;
 }
 
 .header {
@@ -57,6 +52,7 @@ body::after {
 }
 .container img {
   width: 180px;
+  height: 180px;
   display: flex;
   margin: 20px auto;
 }
@@ -76,6 +72,7 @@ body::after {
   color: #fff;
   padding: 0.2em 1em;
   border-radius: 20px;
+  font-weight: 500;
 }
 .container .list {
   display: flex;
@@ -101,4 +98,10 @@ body::after {
 .container .btn:active {
   box-shadow: 0 0 0 #000;
   transform: translate(-0.3em, -0.3em);
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    background-position: 20px 500px;
+  }
 }/*# sourceMappingURL=sytle.css.map */
