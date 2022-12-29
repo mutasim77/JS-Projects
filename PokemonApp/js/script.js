@@ -22,9 +22,7 @@ const btn = document.querySelector('.btn')
 
 btn.addEventListener('click', () => {
     let id = Math.floor(Math.random() * 150) + 1;
-
     let URL = API + id;
-
     fetch(URL)
         .then((res) => res.json())
         .then((result) => {
@@ -36,8 +34,7 @@ btn.addEventListener('click', () => {
 function createCard(data) {
     let name = data.name;
     let image = data.sprites.other.dream_world.front_default;
-    let bgColor = data.types[0].type.name;
-
+    let themeColor = data.types[0].type.name;
 
     card.innerHTML =
         `
@@ -66,13 +63,12 @@ function createCard(data) {
         </div>
     `
     addTypes(data.types);
-
+    bgColor(themeColor);
 }
 
 //! Add the Types
 function addTypes(type) {
     let span = document.createElement('span');
-    console.log(type);
     type.forEach(item => {
         span.innerText = item.type.name;
         document.querySelector('.types').appendChild(span);
@@ -80,6 +76,6 @@ function addTypes(type) {
 }
 
 //! Change Background 
-function bgColor() {
-
+function bgColor(color) {
+    console.log(color);
 }
