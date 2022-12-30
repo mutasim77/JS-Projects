@@ -49,14 +49,13 @@ body {
   border: 1px solid #000;
   border-radius: 5px;
   margin-bottom: 30px;
+  background: linear-gradient(to left, #000000, #000000);
 }
 .container .card .code {
   border-radius: 5px;
   border: 1px solid #000;
   padding: 5px;
-}
-.container .card .code:hover {
-  cursor: text;
+  cursor: pointer;
 }
 .container .card .flex {
   display: flex;

@@ -18,12 +18,13 @@ function setColors() {
     let color2 = inputs[1].value;
     let oreontation = dropDown.value;
     code.innerText = table.style.background = `linear-gradient(${oreontation}, ${color1}, ${color2})`;
-    code.style.color = color1
+    message.classList.add('hide');
 }
 
 //! Copy the code
 document.querySelector('.code').addEventListener('click', () => {
-    navigator.clipboard.writeText(text).then(function () {
-        // message.
-    })
+    navigator.clipboard.writeText(document.querySelector('.code').textContent)
+        .then(() => {
+            message.classList.remove('hide');
+        })
 })
