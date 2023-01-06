@@ -17,6 +17,8 @@ searchBtn.addEventListener('click', () => {
     } else {
         let url = API_URL + input.value;
         fetchData(url)
+        result.classList.remove('hide');
+        infoAboutFoods.classList.add('hide');
     }
 
 });
@@ -56,8 +58,8 @@ function createCard(data) {
 
 //! Get The recipe
 function fetchRecipe(event) {
-    // result.classList.add('hide');
-    // infoAboutFoods.classList.remove('hide');
+    result.classList.add('hide');
+    infoAboutFoods.classList.remove('hide');
     let id = (event.target.previousElementSibling).getAttribute('data-id'); // get ID of food
     fetch(`http://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
         .then((res) => res.json())
@@ -65,9 +67,10 @@ function fetchRecipe(event) {
 }
 
 function showRecipe(data) {
-    let { strMeal, strInstructions } = item;
+    let { strMeal, strInstructions, strMealThumb } = data;
     let result = getRecipe(data);
-
+    ingredientCards.innerHTML = '';
+    input.value = ''
     for (let [key, value] of Object.entries(result)) {
         if (!key) continue;
         console.log(key, value);
@@ -77,11 +80,12 @@ function showRecipe(data) {
                 <img src="https://www.themealdb.com/images/ingredients/${key}.png" alt="${key}">
                 <p>${value} <span>${key}</span></p>
             </div>
-            
+
             `
     }
 
     document.querySelector('.left-side h2').textContent = strMeal;
+    document.querySelector('.left-side img').src = strMealThumb;
     instructions.textContent = strInstructions;
 
 }
