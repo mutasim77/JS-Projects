@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap")
 
+@mixin message($width)
+    font-size: .8em
+    margin-top: 1em
+    background-color: #f15030
+    color: #fff
+    width: $width
+    border-radius: 10px
+    margin: 1em auto 0 auto
+
 *
     margin: 0
     padding: 0
@@ -64,13 +73,7 @@ body
                     text-align: center
                     color: #fff
             .message
-                font-size: .8em
-                margin-top: 1em
-                background-color: #f15030
-                color: #fff
-                width: 200px
-                border-radius: 10px
-                margin: 1em auto 0 auto
+                @include message(200px)
                 display: none
                 &.show
                     display: block
@@ -85,6 +88,10 @@ body
             font-size: 1.9em
             text-transform: capitalize
             margin-bottom: 25px
+        .no-result
+            @include message(300px)
+            &.hide
+                display: none
 
         .result-block
             display: flex

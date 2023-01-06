@@ -106,6 +106,18 @@ body {
   text-transform: capitalize;
   margin-bottom: 25px;
 }
+.container .result .no-result {
+  font-size: 0.8em;
+  margin-top: 1em;
+  background-color: #f15030;
+  color: #fff;
+  width: 300px;
+  border-radius: 10px;
+  margin: 1em auto 0 auto;
+}
+.container .result .no-result.hide {
+  display: none;
+}
 .container .result .result-block {
   display: -webkit-box;
   display: -ms-flexbox;
