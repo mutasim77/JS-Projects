@@ -100,6 +100,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+.container .result.hide {
+  display: none;
+}
 .container .result h1 {
   font-weight: 600;
   font-size: 1.9em;
@@ -161,4 +164,52 @@ body {
   background-color: #fff;
   border-color: #ea4220;
   color: #ea4220;
+}
+.container .info-about-foods {
+  margin-top: 5%;
+  border: 1px solid #d7d7d7;
+  border-radius: 10px;
+  padding: 0.5em;
+}
+.container .info-about-foods.hide {
+  display: none;
+}
+.container .info-about-foods .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.container .info-about-foods .row h2 {
+  font-size: 2em;
+  font-weight: 600;
+}
+.container .info-about-foods .row .left-side {
+  max-width: 420px;
+}
+.container .info-about-foods .row .left-side img {
+  width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 5px #000;
+          box-shadow: 0px 0px 5px #000;
+}
+.container .info-about-foods .row .right-side {
+  width: 100%;
+}
+.container .info-about-foods .row .right-side .ingredient-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.container .info-about-foods .row .right-side .ingredient-cards .card {
+  max-width: 190px;
+}
+.container .info-about-foods .row .right-side .ingredient-cards .card img {
+  width: 100%;
+  text-shadow: 0px 0px 7px #000;
 }/*# sourceMappingURL=style.min.css.map */
