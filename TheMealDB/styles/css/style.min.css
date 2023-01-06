@@ -183,9 +183,16 @@ body {
 .container .info-about-foods .row h2 {
   font-size: 2em;
   font-weight: 600;
+  margin-bottom: 15px;
 }
 .container .info-about-foods .row .left-side {
   max-width: 420px;
+}
+.container .info-about-foods .row .left-side h3 {
+  margin: 30px 0 10px 0;
+}
+.container .info-about-foods .row .left-side p {
+  text-align: center;
 }
 .container .info-about-foods .row .left-side img {
   width: 100%;
@@ -208,6 +215,9 @@ body {
 }
 .container .info-about-foods .row .right-side .ingredient-cards .card {
   max-width: 190px;
+}
+.container .info-about-foods .row .right-side .ingredient-cards .card p span {
+  font-weight: 500;
 }
 .container .info-about-foods .row .right-side .ingredient-cards .card img {
   width: 100%;

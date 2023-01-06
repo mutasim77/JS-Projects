@@ -6,7 +6,9 @@ const input = document.querySelector('.button input'),
     resultBlock = document.querySelector('.result-block'),
     result = document.querySelector('.result'),
     noResultMessage = document.querySelector('.no-result'),
-    infoAboutFoods = document.querySelector(".info-about-foods");
+    infoAboutFoods = document.querySelector(".info-about-foods"),
+    ingredientCards = document.querySelector('.ingredient-cards'),
+    instructions = document.querySelector('.left-side p');
 
 //! When we click search button
 searchBtn.addEventListener('click', () => {
@@ -44,7 +46,7 @@ function createCard(data) {
             `
         });
         document.querySelectorAll('.recipe').forEach(food => {
-            food.addEventListener('click', getRecipe);
+            food.addEventListener('click', fetchRecipe);
         })
     } else {
         noResultMessage.classList.remove('hide');
@@ -53,26 +55,45 @@ function createCard(data) {
 
 
 //! Get The recipe
-function getRecipe(event) {
+function fetchRecipe(event) {
     // result.classList.add('hide');
     // infoAboutFoods.classList.remove('hide');
     let id = (event.target.previousElementSibling).getAttribute('data-id'); // get ID of food
     fetch(`http://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
         .then((res) => res.json())
-        .then(data => showRecipe(data.meals));
+        .then(data => showRecipe(data.meals[0]));
 }
 
 function showRecipe(data) {
-    data.forEach(item => {
-        let { strMeal, strInstructions } = item;
-        let map = {};
-        //? get ingredients
-        for (let i = 1; i <= 20; i++) {
-            let x = `strIngredient${i}`
-            let y = `strMeasure${i}`;
-            map[item[x]] = item[y]
-        }
+    let { strMeal, strInstructions } = item;
+    let result = getRecipe(data);
 
-        console.log(Object.keys(map).forEach(item => console.log(item)));
-    });
+    for (let [key, value] of Object.entries(result)) {
+        if (!key) continue;
+        console.log(key, value);
+        ingredientCards.innerHTML +=
+            `
+            <div class="card">
+                <img src="https://www.themealdb.com/images/ingredients/${key}.png" alt="${key}">
+                <p>${value} <span>${key}</span></p>
+            </div>
+            
+            `
+    }
+
+    document.querySelector('.left-side h2').textContent = strMeal;
+    instructions.textContent = strInstructions;
+
+}
+
+function getRecipe(data) {
+    let map = {};
+
+    //? get ingredients
+    for (let i = 1; i <= 20; i++) {
+        let x = `strIngredient${i}`; //* ingredient
+        let y = `strMeasure${i}`; //* measure
+        map[data[x]] = data[y]; //? save ingredient as a key and measure as a value;
+    }
+    return map;
 }
