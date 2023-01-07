@@ -1,2 +1,2 @@
 # JS-Projects
-My JS Projects that i made
+My JS Projects that i made.
