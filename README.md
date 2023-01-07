@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # JS-Projects📌
 
 ![](https://visitor-badge.glitch.me/badge?page_id=anmol098.anmol098)
@@ -11,3 +12,7 @@ Below, you will find screenshots of some of the projects included in this reposi
 
 I hope that these projects will be helpful for others who are also learning JavaScript."
 
+=======
+# JS-Projects
+My JS Projects that i made.
+>>>>>>> b42fe5d199d1170982ca20548c8c3fc4e1102129
