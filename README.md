@@ -20,7 +20,7 @@ I hope that these projects will be helpful for others who are also learning Java
 
 ### Demo of projects :
 - <a href="https://github.com/mutasim77/JS-Projects/tree/main/MemoryGame">Memory Game</a>
-<img width="900" alt="Screen Shot 2023-01-10 at 5 30 35 PM" src="https://user-images.githubusercontent.com/96326525/211540954-27006413-bee9-43c5-9297-7a1f85437486.png">
+<img width="900" alt="Screen Shot 2023-01-10 at 5 30 53 PM" src="https://user-images.githubusercontent.com/96326525/211542384-b85647ef-623b-49ab-98e0-54fbd8ed72e5.png">
 
 - <a href="https://github.com/mutasim77/JS-Projects/tree/main/WeatherApp">App Weather</a>
 <img width="900" alt="Screen Shot 2023-01-10 at 5 34 19 PM" src="https://user-images.githubusercontent.com/96326525/211541583-d14dc7b0-703e-42f6-bea7-45019b2c2e8b.png">
