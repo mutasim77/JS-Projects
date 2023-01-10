@@ -19,5 +19,5 @@ I hope that these projects will be helpful for others who are also learning Java
 <hr>
 
 ### Demo of projects :
-- <a href="https://github.com/mutasim77/JS-Projects/tree/main/MemoryGame">Memory Game</a>
+- <a href="https://github.com/mutasim77/JS-Projects/tree/main/MemoryGame" target="_blank">Memory Game</a>
 <img width="1440" alt="Screen Shot 2023-01-10 at 5 30 35 PM" src="https://user-images.githubusercontent.com/96326525/211540954-27006413-bee9-43c5-9297-7a1f85437486.png">
