@@ -21,3 +21,18 @@ I hope that these projects will be helpful for others who are also learning Java
 ### Demo of projects :
 - <a href="https://github.com/mutasim77/JS-Projects/tree/main/MemoryGame">Memory Game</a>
 <img width="900" alt="Screen Shot 2023-01-10 at 5 30 35 PM" src="https://user-images.githubusercontent.com/96326525/211540954-27006413-bee9-43c5-9297-7a1f85437486.png">
+
+- <a href="https://github.com/mutasim77/JS-Projects/tree/main/WeatherApp">App Weather</a>
+<img width="900" alt="Screen Shot 2023-01-10 at 5 34 19 PM" src="https://user-images.githubusercontent.com/96326525/211541583-d14dc7b0-703e-42f6-bea7-45019b2c2e8b.png">
+
+- <a href="https://github.com/mutasim77/JS-Projects/tree/main/checkPalindrome">Check Palindrome</a>
+<img width="900" alt="Screen Shot 2023-01-10 at 5 35 40 PM" src="https://user-images.githubusercontent.com/96326525/211541841-874ca602-465d-40f3-8a12-2f4f988e3c88.png">
+
+- <a href="https://github.com/mutasim77/JS-Projects/tree/main/FormLogin">Form Login</a>
+<div style="display: flex;">  
+<img width="450" alt="Screen Shot 2023-01-10 at 5 37 00 PM" src="https://user-images.githubusercontent.com/96326525/211542132-ea467131-f817-4045-b118-adfd5f63d98f.png">
+<img width="450" alt="Screen Shot 2023-01-10 at 5 37 18 PM" src="https://user-images.githubusercontent.com/96326525/211542147-2e49014e-b042-4b00-be00-4a838d3a3d3e.png">
+</div>
+
+
+
