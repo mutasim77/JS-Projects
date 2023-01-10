@@ -34,5 +34,18 @@ I hope that these projects will be helpful for others who are also learning Java
 <img width="450" alt="Screen Shot 2023-01-10 at 5 37 18 PM" src="https://user-images.githubusercontent.com/96326525/211542147-2e49014e-b042-4b00-be00-4a838d3a3d3e.png">
 </div>
 
+- <a href="https://github.com/mutasim77/JS-Projects/tree/main/Clock">Clock</a>
+<img width="900" alt="Screen Shot 2023-01-10 at 5 39 49 PM" src="https://user-images.githubusercontent.com/96326525/211542555-8596fcad-8c5a-4ca1-95e4-86194a79773c.png">
+
+- <a href="https://github.com/mutasim77/JS-Projects/tree/main/CountryGetInfo">Get Info about countries</a>
+<img width="900" alt="Screen Shot 2023-01-10 at 5 42 46 PM" src="https://user-images.githubusercontent.com/96326525/211543000-880ac8ff-4d63-424d-bf7c-e8eac31886e8.png">
+
+
+
+
+
+
+
+
 
 
