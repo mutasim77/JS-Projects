@@ -15,3 +15,9 @@ This repository contains a collection of projects that I created while learning 
 Below, you will find screenshots🖼 of some of the projects included in this repository. These screenshots give you a glimpse of what each project looks like and how it functions.🗂
 
 I hope that these projects will be helpful for others who are also learning JavaScript. If you find my projects helpful or interesting, please consider starring🌟 the repository to show your support!🤗
+
+<hr>
+
+### Demo of projects :
+- <a href="https://github.com/mutasim77/JS-Projects/tree/main/MemoryGame">Memory Game</a>
+<img width="1440" alt="Screen Shot 2023-01-10 at 5 30 35 PM" src="https://user-images.githubusercontent.com/96326525/211540954-27006413-bee9-43c5-9297-7a1f85437486.png">
