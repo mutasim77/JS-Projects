@@ -40,6 +40,9 @@ I hope that these projects will be helpful for others who are also learning Java
 - <a href="https://github.com/mutasim77/JS-Projects/tree/main/CountryGetInfo">Get Info about countries</a>
 <img width="900" alt="Screen Shot 2023-01-10 at 5 42 46 PM" src="https://user-images.githubusercontent.com/96326525/211543000-880ac8ff-4d63-424d-bf7c-e8eac31886e8.png">
 
+- <a href="https://github.com/mutasim77/JS-Projects/tree/main/MathGame">Math Game</a>
+<img width="900" alt="Screen Shot 2023-01-11 at 8 00 26 AM" src="https://user-images.githubusercontent.com/96326525/211700576-e010b001-bd53-42fa-9314-d4f998b6992f.png">
+
 
 
 
