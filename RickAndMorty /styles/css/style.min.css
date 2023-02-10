@@ -1,0 +1,6 @@
+@import '../css/reset.css';
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap");
+body {
+  background: url("https://img.freepik.com/premium-vector/star-sky-space-stars-background-glitter-particles_160081-317.jpg");
+  font-family: "Poppins", sans-serif;
+}/*# sourceMappingURL=style.min.css.map */
