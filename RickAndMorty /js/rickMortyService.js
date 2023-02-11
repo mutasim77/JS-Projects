@@ -12,7 +12,7 @@ class RickMortyService {
         return data;
     }
 
-    // get all characters using above api and below maping result
+    //! get all characters using above api and below maping result
     getAllCharacters = async (page = 1) => {
         const res = await this.getResources(`${this._apiBase}character?page=${page}`);
         return res.results.map(this._transformCharacter);
@@ -25,8 +25,8 @@ class RickMortyService {
             gender: results.gender,
             image: results.image
         }
-
     }
+
 }
 
 export default RickMortyService;
