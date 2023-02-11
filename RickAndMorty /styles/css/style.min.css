@@ -115,4 +115,17 @@ body {
 }
 .main .card i.liked {
   color: #fd4e4e;
+}
+.main .btn {
+  background-color: #e9e9e9;
+  margin: 3em 0;
+  padding: 0.3em 1.7em;
+  color: #484747;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.main .btn:hover {
+  background-color: #484747;
+  color: #e9e9e9;
 }/*# sourceMappingURL=style.min.css.map */

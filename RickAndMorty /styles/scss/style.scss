@@ -93,6 +93,20 @@ body{
         }
     }
 
+    .btn{
+        background-color: $light;
+        margin: 3em 0;
+        padding: .3em 1.7em;
+        color: $dark;
+        border-radius: 5px;
+        transition: all .3s ease;
+        
+
+        &:hover{
+            background-color: $dark;
+            color: $light;
+        }
+    }
 
 }
 
