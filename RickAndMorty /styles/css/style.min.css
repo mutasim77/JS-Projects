@@ -31,6 +31,12 @@
           align-items: center;
 }
 
+.justify-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .justify-between {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -74,7 +80,7 @@ body.dark {
 .header img {
   -webkit-filter: drop-shadow(30px 10px 4px #4444dd);
           filter: drop-shadow(30px 10px 4px #4444dd);
-  max-width: 100%;
+  max-width: 50%;
   -webkit-animation: header-animate 5s linear infinite;
           animation: header-animate 5s linear infinite;
 }
@@ -213,7 +219,15 @@ body.dark {
   color: var(--light);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+  .header img {
+    max-width: 100%;
+  }
+  .main .card {
+    max-width: 153px;
+  }
+}
+@media screen and (max-width: 767px) {
   .main .card {
     max-width: 160px;
   }

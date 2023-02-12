@@ -32,7 +32,7 @@ body.dark{
 
     img{
         filter: drop-shadow(30px 10px 4px #4444dd);
-        max-width: 100%;
+        max-width: 50%;
         animation: header-animate 5s linear infinite;
     }
 
@@ -174,11 +174,26 @@ body.dark{
 
 
 //Media Quiery
-@media screen and (max-width: 768px){
+
+//! Tablet
+@media screen and (max-width: 1024px){
+    .header{
+        img{
+            max-width: 100%;
+        }
+    }
+    .main .card {
+        max-width: 153px;
+    }
+}
+
+//!Phone
+@media screen and (max-width: 767px){
     .main{
         .card{
             max-width: 160px;
         }
     }
 }
+
 
