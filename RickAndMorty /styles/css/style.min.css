@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import '../css/reset.css';
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap");
 :root {
@@ -100,8 +101,41 @@ body.light {
 .header .dark-mode {
   background-color: var(--red);
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 25px;
+  top: 25px;
+}
+.header .dark-mode button {
+  color: var(--light);
+  background-color: var(--dark);
+  padding: 0.4em 0.7em 0.4em 3em;
+  border-radius: 50px;
+  border: 1px solid var(--light);
+  position: relative;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.header .dark-mode button::after {
+  position: absolute;
+  content: "";
+  width: 31px;
+  height: 31px;
+  left: 4px;
+  top: 3px;
+  border-radius: 50%;
+  background-color: var(--light);
+}
+.header .dark-mode button::before {
+  position: absolute;
+  content: "☀️";
+  width: 31px;
+  height: 31px;
+  left: 4px;
+  font-size: 1.3em;
+  top: 4px;
+  border-radius: 50%;
+}
+.header .dark-mode button.dark::after {
+  left: 40px;
 }
 
 .main .text-header {

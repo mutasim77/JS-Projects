@@ -48,8 +48,47 @@ body.light{
     .dark-mode{
         background-color: var(--red);
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 25px;
+        top: 25px;
+
+        button{
+            color: var(--light);
+            background-color: var(--dark);
+            padding: .4em .7em .4em 3em;
+            border-radius: 50px;
+            border: 1px solid var(--light);
+            position: relative;
+            transition: all .5s ease;
+
+            &::after{
+                position: absolute;
+                content: "";
+                width: 31px;
+                height: 31px;
+                left: 4px;
+                top: 3px;
+                border-radius: 50%;
+                background-color: var(--light);
+            }
+
+            &::before{
+                position: absolute;
+                content: "☀️";
+                width: 31px;
+                height: 31px;
+                left: 4px;
+                font-size: 1.3em;
+                top: 4px;
+                border-radius: 50%;
+            }
+
+            &.dark{
+                &::after{
+                    left: 40px;
+                }
+            }
+            
+        }
     }
 }
 
@@ -122,7 +161,7 @@ body.light{
         border: 1px solid var(--dark);
         border-radius: 5px;
         transition: all .3s ease;
-        
+
         &:hover{
             border-color: var(--light);
             background-color: var(--dark);
