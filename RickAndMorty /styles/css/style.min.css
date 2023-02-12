@@ -31,6 +31,13 @@
           justify-content: space-between;
 }
 
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 body {
   background: url("https://img.freepik.com/premium-vector/star-sky-space-stars-background-glitter-particles_160081-317.jpg");
   font-family: "Poppins", sans-serif;
@@ -121,11 +128,13 @@ body {
   margin: 3em 0;
   padding: 0.3em 1.7em;
   color: #484747;
+  border: 1px solid #484747;
   border-radius: 5px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .main .btn:hover {
+  border-color: #e9e9e9;
   background-color: #484747;
   color: #e9e9e9;
 }/*# sourceMappingURL=style.min.css.map */

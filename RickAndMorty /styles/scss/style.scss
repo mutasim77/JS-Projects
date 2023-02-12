@@ -93,15 +93,18 @@ body{
         }
     }
 
+
     .btn{
         background-color: $light;
         margin: 3em 0;
         padding: .3em 1.7em;
         color: $dark;
+        border: 1px solid $dark;
         border-radius: 5px;
         transition: all .3s ease;
         
         &:hover{
+            border-color: $light;
             background-color: $dark;
             color: $light;
         }
