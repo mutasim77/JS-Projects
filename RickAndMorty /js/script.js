@@ -14,6 +14,7 @@ function showAllCharacters(arr) {
     arr.forEach(item => {
         const card = document.createElement('div');
         card.classList.add('card');
+        card.setAttribute('data-aos', 'flip-left');
         card.innerHTML =
             `
             <img src="${item.image}" alt="${item.name}">
@@ -63,3 +64,6 @@ function delCharacters(name) {
         }
     });
 }
+
+//! Run Aos Animations
+AOS.init();
