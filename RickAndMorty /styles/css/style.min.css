@@ -50,7 +50,7 @@ body {
   color: var(--light);
 }
 
-body.light {
+body.dark {
   background: url("https://c4.wallpaperflare.com/wallpaper/963/87/601/light-blue-background-hd-wallpaper-wallpaper-preview.jpg") no-repeat;
   background-size: cover;
   background-position: center;
@@ -123,6 +123,8 @@ body.light {
   top: 3px;
   border-radius: 50%;
   background-color: var(--light);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .header .dark-mode button::before {
   position: absolute;
