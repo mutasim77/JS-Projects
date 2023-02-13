@@ -3,10 +3,14 @@ import RickMortyService from "./rickMortyService.js";
 //! class that fetch data and return needed result
 const api = new RickMortyService();
 
-api.getAllCharacters()
-    .then(item => {
-        showAllCharacters(item);
-    })
+function getCharacters(page = 1) {
+    api.getAllCharacters(page)
+        .then(item => {
+            showAllCharacters(item);
+        })
+}
+
+getCharacters();
 
 //! Function that create all cards
 function showAllCharacters(arr) {
@@ -66,9 +70,11 @@ function delCharacters(name) {
 }
 
 //! More Button
+let countPage = 2;
 const buttonMore = document.querySelector('.btn#more');
 buttonMore.addEventListener('click', () => {
-    console.log('Hello');
+    getCharacters(countPage++);
+    console.log(countPage);
 });
 
 //! Dark Mode
