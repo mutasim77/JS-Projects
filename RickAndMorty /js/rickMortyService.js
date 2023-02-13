@@ -13,7 +13,7 @@ class RickMortyService {
     }
 
     //! get all characters using above api and below maping result
-    getAllCharacters = async (page = 1) => {
+    getAllCharacters = async (page) => {
         const res = await this.getResources(`${this._apiBase}character?page=${page}`);
         return res.results.map(this._transformCharacter);
     }
