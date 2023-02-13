@@ -65,6 +65,12 @@ function delCharacters(name) {
     });
 }
 
+//! More Button
+const buttonMore = document.querySelector('.btn#more');
+buttonMore.addEventListener('click', () => {
+    console.log('Hello');
+});
+
 //! Dark Mode
 const buttonDark = document.querySelector('.dark-mode button');
 buttonDark.addEventListener('click', () => {
