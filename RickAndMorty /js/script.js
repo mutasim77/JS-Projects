@@ -31,7 +31,7 @@ function showAllCharacters(arr) {
     });
 
     //! Add click listener for all like buttons, for adding to favorite characters or deleting
-    document.querySelectorAll('.like').forEach(btn => {
+    document.querySelectorAll('.like i').forEach(btn => {
         btn.addEventListener('click', (event) => {
             const target = event.target;
             const parentElement = target.parentElement.parentElement.parentElement;
@@ -74,7 +74,6 @@ let countPage = 2;
 const buttonMore = document.querySelector('.btn#more');
 buttonMore.addEventListener('click', () => {
     getCharacters(countPage++);
-    console.log(countPage);
 });
 
 //! Dark Mode
