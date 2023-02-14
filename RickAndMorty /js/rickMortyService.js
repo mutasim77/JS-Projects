@@ -23,7 +23,8 @@ class RickMortyService {
             name: results.name,
             status: results.status,
             gender: results.gender,
-            image: results.image
+            image: results.image,
+            id: results.id
         }
     }
 

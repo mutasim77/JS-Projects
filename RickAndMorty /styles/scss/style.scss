@@ -135,6 +135,7 @@ body.dark{
             height: 90%;
             object-fit: cover;
             border-radius: 10px;
+            cursor: pointer;
         }
 
         .name, i{
@@ -170,6 +171,65 @@ body.dark{
             color: var(--light);
         }
     }
+
+    .modal{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: rgba(0,0,0,.5);
+
+        &.hide{
+            display: none;
+        }
+
+        .modal-window{
+            position: relative;
+            background-color: var(--light);
+            max-width: 500px;
+            padding: 30px;
+            margin: 8% auto 0;
+            color: var(--dark);
+            font-weight: 600;
+            border: 2px solid var(--dark);
+            border-radius: 10px;
+
+            span{
+                font-weight: 400;
+            }
+
+            img{
+                border: 1px solid var(--dark);
+                border-radius: 10px;
+            }
+
+            .close-btn{
+                background-color: var(--dark);
+                border: 1px solid var(--light);
+                color: var(--light);
+                padding: .5em 1em;
+                border-radius: 50%;
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                cursor: pointer;
+                transition: all .3s ease;
+
+                &:hover{
+                    color: var(--dark);
+                    background-color: var(--light);
+                    border-color: var(--dark);
+                }
+            }
+
+            .info{
+                line-height: 1.9;
+            }
+        }
+    }
+
 
 }
 

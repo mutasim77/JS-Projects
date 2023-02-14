@@ -188,6 +188,7 @@ body.dark {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
+  cursor: pointer;
 }
 .main .card .name, .main .card i {
   color: var(--dark);
@@ -217,6 +218,57 @@ body.dark {
   border-color: var(--light);
   background-color: var(--dark);
   color: var(--light);
+}
+.main .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.5);
+}
+.main .modal.hide {
+  display: none;
+}
+.main .modal .modal-window {
+  position: relative;
+  background-color: var(--light);
+  max-width: 500px;
+  padding: 30px;
+  margin: 8% auto 0;
+  color: var(--dark);
+  font-weight: 600;
+  border: 2px solid var(--dark);
+  border-radius: 10px;
+}
+.main .modal .modal-window span {
+  font-weight: 400;
+}
+.main .modal .modal-window img {
+  border: 1px solid var(--dark);
+  border-radius: 10px;
+}
+.main .modal .modal-window .close-btn {
+  background-color: var(--dark);
+  border: 1px solid var(--light);
+  color: var(--light);
+  padding: 0.5em 1em;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.main .modal .modal-window .close-btn:hover {
+  color: var(--dark);
+  background-color: var(--light);
+  border-color: var(--dark);
+}
+.main .modal .modal-window .info {
+  line-height: 1.9;
 }
 
 @media screen and (max-width: 1024px) {

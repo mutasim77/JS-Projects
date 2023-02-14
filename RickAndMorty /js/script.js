@@ -19,6 +19,7 @@ function showAllCharacters(arr) {
         const card = document.createElement('div');
         card.classList.add('card');
         card.setAttribute('data-aos', 'flip-left');
+        card.setAttribute('data-id', `${item.id}`);
         card.innerHTML =
             `
             <img src="${item.image}" alt="${item.name}">
@@ -75,6 +76,10 @@ const buttonMore = document.querySelector('.btn#more');
 buttonMore.addEventListener('click', () => {
     getCharacters(countPage++);
 });
+
+//! Modal Window
+
+
 
 //! Dark Mode
 const buttonDark = document.querySelector('.dark-mode button');
