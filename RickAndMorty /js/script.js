@@ -49,6 +49,13 @@ function showAllCharacters(arr) {
 
         });
     });
+
+    //! Add click Listener for all cards showModal
+    document.querySelector('.card img').forEach(item => {
+        item.addEventListener('click', () => {
+            console.log(item);
+        })
+    })
 }
 
 //! Save favoriter characters
@@ -78,8 +85,11 @@ buttonMore.addEventListener('click', () => {
 });
 
 //! Modal Window
+// using hide class get the info about character show and using close button close  modale window
+const modal = document.querySelector('.modal');
+function showModal() {
 
-
+}
 
 //! Dark Mode
 const buttonDark = document.querySelector('.dark-mode button');
