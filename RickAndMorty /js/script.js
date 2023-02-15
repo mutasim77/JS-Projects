@@ -19,10 +19,9 @@ function showAllCharacters(arr) {
         const card = document.createElement('div');
         card.classList.add('card');
         card.setAttribute('data-aos', 'flip-left');
-        card.setAttribute('data-id', `${item.id}`);
         card.innerHTML =
             `
-            <img src="${item.image}" alt="${item.name}">
+            <img src="${item.image}" alt="${item.name}" data-id="${item.id}">
             <div class="flex alig-center justify-between pr-2">
                 <h3 class="name">${item.name}</h3>
                 <div class="like"><i class="fa fa-heart" aria-hidden="true"></i></div>
@@ -51,9 +50,11 @@ function showAllCharacters(arr) {
     });
 
     //! Add click Listener for all cards showModal
-    document.querySelector('.card img').forEach(item => {
-        item.addEventListener('click', () => {
-            console.log(item);
+    document.querySelectorAll('.card img').forEach(item => {
+        item.addEventListener('click', (event) => {
+            const target = event.target.getAttribute('data-id');
+            console.log(target);
+            showModalInfo();
         })
     })
 }
@@ -85,11 +86,16 @@ buttonMore.addEventListener('click', () => {
 });
 
 //! Modal Window
-// using hide class get the info about character show and using close button close  modale window
 const modal = document.querySelector('.modal');
-function showModal() {
-
+function showModalInfo() {
+    modal.classList.remove('hide');
 }
+
+//! Close Modal Window
+const modalCloseBtn = document.querySelector('.close-btn');
+modalCloseBtn.addEventListener('click', () => {
+    modal.classList.add('hide');
+});
 
 //! Dark Mode
 const buttonDark = document.querySelector('.dark-mode button');
