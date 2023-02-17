@@ -88,7 +88,9 @@ buttonMore.addEventListener('click', () => {
 const modal = document.querySelector('.modal');
 function showModalInfo(id) {
     modal.classList.remove('hide');
+    document.body.style.overflow = 'hidden';
     api.getCharacterInfo(id).then(item => {
+
         //? length of 10 for item.created
         const modalWindow = document.querySelector('.modal-window');
         modalWindow.innerHTML =
@@ -98,11 +100,10 @@ function showModalInfo(id) {
             <div class="name">Name : <span>${item.name}</span></div>
             <div class="status">Status : <span>${item.status}</span></div>
             <div class="species">Species : <span>${item.species}</span></div>
-            <div class="type">Type : <span>${item.type}</span></div>
             <div class="gender">Gender : <span>${item.gender}</span></div>
-            <div class="origin">Origin : <span>${item.origin}</span></div>
-            <div class="location">Location : <span>${item.location}</span></div>
-            <div class="created">Created : <span>${item.created}</span></div>
+            <div class="origin">Origin : <span>${item.origin.name}</span></div>
+            <div class="location">Location : <span>${item.location.name}</span></div>
+            <div class="created">Created : <span>${item.created.substring(0, 10)}</span></div>
         </div>
         <div class="close-btn">x</div>
         `;
@@ -113,10 +114,15 @@ function showModalInfo(id) {
             modal.classList.add('hide');
         });
     })
-
 }
 
-
+//! Modal Close if we click out of it
+modal.addEventListener('click', (event) => {
+    document.body.style.overflow = '';
+    if (event.target == modal) {
+        modal.classList.add('hide');
+    }
+})
 
 //! Dark Mode
 const buttonDark = document.querySelector('.dark-mode button');
