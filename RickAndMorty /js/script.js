@@ -89,14 +89,34 @@ const modal = document.querySelector('.modal');
 function showModalInfo(id) {
     modal.classList.remove('hide');
     api.getCharacterInfo(id).then(item => {
+        //? length of 10 for item.created
+        const modalWindow = document.querySelector('.modal-window');
+        modalWindow.innerHTML =
+            `
+        <img src="${item.image}" alt="${item.name}">
+        <div class="flex flex-column info">
+            <div class="name">Name : <span>${item.name}</span></div>
+            <div class="status">Status : <span>${item.status}</span></div>
+            <div class="species">Species : <span>${item.species}</span></div>
+            <div class="type">Type : <span>${item.type}</span></div>
+            <div class="gender">Gender : <span>${item.gender}</span></div>
+            <div class="origin">Origin : <span>${item.origin}</span></div>
+            <div class="location">Location : <span>${item.location}</span></div>
+            <div class="created">Created : <span>${item.created}</span></div>
+        </div>
+        <div class="close-btn">x</div>
+        `;
+
+        //! Close Modal Window
+        const modalCloseBtn = document.querySelector('.close-btn');
+        modalCloseBtn.addEventListener('click', () => {
+            modal.classList.add('hide');
+        });
     })
+
 }
 
-//! Close Modal Window
-const modalCloseBtn = document.querySelector('.close-btn');
-modalCloseBtn.addEventListener('click', () => {
-    modal.classList.add('hide');
-});
+
 
 //! Dark Mode
 const buttonDark = document.querySelector('.dark-mode button');
