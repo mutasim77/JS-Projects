@@ -18,6 +18,12 @@ class RickMortyService {
         return res.results.map(this._transformCharacter);
     }
 
+    //! get Info about character using above api and below maping result
+    getCharacterInfo = async (id) => {
+        const res = await this.getResources(`${this._apiBase}character/${id}`);
+        return res;
+    }
+
     _transformCharacter = (results) => {
         return {
             name: results.name,
@@ -27,7 +33,6 @@ class RickMortyService {
             id: results.id
         }
     }
-
 }
 
 export default RickMortyService;

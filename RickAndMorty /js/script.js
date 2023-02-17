@@ -53,8 +53,7 @@ function showAllCharacters(arr) {
     document.querySelectorAll('.card img').forEach(item => {
         item.addEventListener('click', (event) => {
             const target = event.target.getAttribute('data-id');
-            console.log(target);
-            showModalInfo();
+            showModalInfo(target);
         })
     })
 }
@@ -87,8 +86,10 @@ buttonMore.addEventListener('click', () => {
 
 //! Modal Window
 const modal = document.querySelector('.modal');
-function showModalInfo() {
+function showModalInfo(id) {
     modal.classList.remove('hide');
+    api.getCharacterInfo(id).then(item => {
+    })
 }
 
 //! Close Modal Window
