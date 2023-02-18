@@ -131,5 +131,10 @@ buttonDark.addEventListener('click', () => {
     document.body.classList.toggle('dark');
 });
 
+
+//! Save in localstorage
+// const localInfo = 
+
+
 //! Run Aos Animations
 AOS.init();
