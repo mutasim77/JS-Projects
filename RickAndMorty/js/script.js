@@ -67,9 +67,7 @@ function favCharacters(picture, name) {
 
     document.querySelector('#favorites').appendChild(circle);
     objFavChars[name] = picture;
-    // location.reload()
-    console.log(objFavChars);
-    localStorage.setItem('data', objFavChars);
+    localStorage.setItem('data', JSON.stringify(objFavChars));
 }
 
 //! Delete favorite characters
@@ -100,7 +98,7 @@ function showModalInfo(id) {
         const modalWindow = document.querySelector('.modal-window');
         modalWindow.innerHTML =
             `
-        < img src = "${item.image}" alt = "${item.name}" >
+        <img src = "${item.image}" alt = "${item.name}">
         <div class="flex flex-column info">
             <div class="name">Name : <span>${item.name}</span></div>
             <div class="status">Status : <span>${item.status}</span></div>
@@ -111,7 +109,7 @@ function showModalInfo(id) {
             <div class="created">Created : <span>${item.created.substring(0, 10)}</span></div>
         </div>
         <div class="close-btn">x</div>
-    `;
+        `;
 
         //! Close Modal Window
         const modalCloseBtn = document.querySelector('.close-btn');
@@ -136,10 +134,18 @@ buttonDark.addEventListener('click', () => {
     document.body.classList.toggle('dark');
 });
 
-
+let dataLocalStorage = null;
 //! Save in localstorage
-// const localInfo = 
+if (sessionStorage.getItem("is_reloaded")) {
+    dataLocalStorage = localStorage.getItem('data');
+};
+sessionStorage.setItem("is_reloaded", true);
 
+const savedChars = JSON.parse(dataLocalStorage);
+for (let [key, value] of Object.entries(savedChars)) {
+    console.log(key);
+    favCharacters(key, value);
+}
 
 //! Run Aos Animations
 AOS.init();
