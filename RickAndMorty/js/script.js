@@ -59,12 +59,17 @@ function showAllCharacters(arr) {
 }
 
 //! Save favoriter characters
+const objFavChars = {};
 function favCharacters(picture, name) {
     const circle = document.createElement('div');
     circle.classList.add('circle');
     circle.innerHTML = `<img src="${picture}" alt="${name}">`;
 
     document.querySelector('#favorites').appendChild(circle);
+    objFavChars[name] = picture;
+    // location.reload()
+    console.log(objFavChars);
+    localStorage.setItem('data', objFavChars);
 }
 
 //! Delete favorite characters
@@ -95,7 +100,7 @@ function showModalInfo(id) {
         const modalWindow = document.querySelector('.modal-window');
         modalWindow.innerHTML =
             `
-        <img src="${item.image}" alt="${item.name}">
+        < img src = "${item.image}" alt = "${item.name}" >
         <div class="flex flex-column info">
             <div class="name">Name : <span>${item.name}</span></div>
             <div class="status">Status : <span>${item.status}</span></div>
@@ -106,7 +111,7 @@ function showModalInfo(id) {
             <div class="created">Created : <span>${item.created.substring(0, 10)}</span></div>
         </div>
         <div class="close-btn">x</div>
-        `;
+    `;
 
         //! Close Modal Window
         const modalCloseBtn = document.querySelector('.close-btn');
