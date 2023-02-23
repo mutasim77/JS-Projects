@@ -1,4 +1,15 @@
 @import '../css/reset.css';
+:root {
+  color: #fff;
+  background-color: #000;
+}
+
 body {
-  background-color: red;
+  background-color: #000;
+  color: #fff;
+}
+
+body.light {
+  color: #000;
+  background-color: #fff;
 }/*# sourceMappingURL=style.min.css.map */

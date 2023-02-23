@@ -1,5 +1,12 @@
 @import '../css/reset.css';
+@import './variables';
 
 body{
-    background-color: red;
+    background-color: $dark;
+    color: $light;
+}
+
+body.light{
+    color: $dark;
+    background-color: $light;
 }
