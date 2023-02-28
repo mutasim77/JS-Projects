@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import '../css/reset.css';
 @import './variables';
 
 body{
     background-color: $dark;
     color: $light;
+    font-family: $font-poppins;
 }
 
 body.light{
@@ -14,4 +16,20 @@ body.light{
 .container{
     max-width: 1170px;
     padding: 0 15px;
+}
+
+.header{
+    background-color: #080957;
+    padding: 1em 0;
+
+    > div{
+        display: flex;
+        align-items: center;
+    }
+
+    border-bottom: 2px solid $light;
+
+    img{
+        width: 170px;
+    }
 }
