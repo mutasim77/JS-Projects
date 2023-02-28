@@ -3,14 +3,14 @@
 @import './variables';
 
 body{
-    background-color: $dark;
-    color: $light;
+    background-color: var(--dark);
+    color: var(--light);
     font-family: $font-poppins;
 }
 
 body.light{
-    color: $dark;
-    background-color: $light;
+    --light:#0d0f6d;
+    --dark:#e9e9e9;
 }
 
 .container{
@@ -21,13 +21,61 @@ body.light{
 .header{
     background-color: #080957;
     padding: 1em 0;
-
+    // color: #fff;
     > div{
         display: flex;
         align-items: center;
+        justify-content: space-between;
+
+        .dark-mode{
+            background-color: var(--red);
+            position: absolute;
+            right: 25px;
+            top: 25px;
+    
+            button{
+                color: var(--light);
+                background-color: var(--dark);
+                padding: .4em .7em .4em 3em;
+                border-radius: 50px;
+                border: 1px solid var(--light);
+                position: relative;
+                transition: all .5s ease;
+    
+                &::after{
+                    position: absolute;
+                    content: "";
+                    width: 31px;
+                    height: 31px;
+                    left: 4px;
+                    top: 3px;
+                    border-radius: 50%;
+                    background-color: var(--light);
+                    transition: all .5s ease;
+                }
+    
+                &::before{
+                    position: absolute;
+                    content: "☀️";
+                    width: 31px;
+                    height: 31px;
+                    left: 4px;
+                    font-size: 1.3em;
+                    top: 4px;
+                    border-radius: 50%;
+                }
+    
+                &.dark{
+                    &::after{
+                        left: 40px;
+                    }
+                }
+                
+            }
+        }
     }
 
-    border-bottom: 2px solid $light;
+    border-bottom: 2px solid var(--light);
 
     img{
         width: 170px;
