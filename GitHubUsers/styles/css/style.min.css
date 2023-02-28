@@ -12,20 +12,21 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-body.light {
+body.dark {
   --light:#0d0f6d;
   --dark:#e9e9e9;
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1250px;
   padding: 0 15px;
+  margin: 0 auto;
 }
 
 .header {
   background-color: #080957;
   padding: 1em 0;
-  border-bottom: 2px solid var(--light);
+  border-bottom: 2px solid #b0b0b0;
 }
 .header > div {
   display: -webkit-box;
@@ -40,12 +41,11 @@ body.light {
 }
 .header > div .name {
   color: #fff;
+  letter-spacing: 3px;
+  font-size: 1.3em;
 }
 .header > div .dark-mode {
   background-color: var(--red);
-  position: absolute;
-  right: 25px;
-  top: 25px;
 }
 .header > div .dark-mode button {
   color: var(--light);

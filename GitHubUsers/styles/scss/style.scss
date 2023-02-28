@@ -8,20 +8,22 @@ body{
     font-family: $font-poppins;
 }
 
-body.light{
+body.dark{
     --light:#0d0f6d;
     --dark:#e9e9e9;
 }
 
 .container{
-    max-width: 1170px;
+    max-width: 1250px;
     padding: 0 15px;
+    margin: 0 auto;
 }
 
 .header{
     background-color: #080957;
     padding: 1em 0;
-    // color: #fff;
+    border-bottom: 2px solid #b0b0b0;
+
     > div{
         display: flex;
         align-items: center;
@@ -29,14 +31,13 @@ body.light{
 
         .name{
             color: #fff;
+            letter-spacing: 3px;
+            font-size: 1.3em;
         }
 
         .dark-mode{
             background-color: var(--red);
-            position: absolute;
-            right: 25px;
-            top: 25px;
-    
+
             button{
                 color: var(--light);
                 background-color: var(--dark);
@@ -78,8 +79,6 @@ body.light{
             }
         }
     }
-
-    border-bottom: 2px solid var(--light);
 
     img{
         width: 170px;
