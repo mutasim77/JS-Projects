@@ -27,6 +27,10 @@ body.light{
         align-items: center;
         justify-content: space-between;
 
+        .name{
+            color: #fff;
+        }
+
         .dark-mode{
             background-color: var(--red);
             position: absolute;

@@ -38,6 +38,9 @@ body.light {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.header > div .name {
+  color: #fff;
+}
 .header > div .dark-mode {
   background-color: var(--red);
   position: absolute;
