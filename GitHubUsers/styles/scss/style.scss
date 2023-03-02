@@ -91,7 +91,7 @@ body.dark{
     > div{
         display: flex;
         align-items: center;
-        justify-content: center;
+        flex-direction: column;
     }
 
     .input{
@@ -106,6 +106,7 @@ body.dark{
     input[data-id="search"]{
         width: 400px;
     }
+
     .btn{
         background-color: var(--light);
         color: var(--dark);
