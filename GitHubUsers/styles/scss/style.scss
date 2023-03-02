@@ -37,7 +37,7 @@ body.dark{
 
         .dark-mode{
             background-color: var(--red);
-
+            margin-left: 100px;
             button{
                 color: var(--light);
                 background-color: var(--dark);
@@ -83,4 +83,36 @@ body.dark{
     img{
         width: 170px;
     }
+}
+
+.main{
+    margin-top: 2em;
+    
+    > div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .input{
+        position: relative;
+    }
+
+    input[data-id="search"], .btn{
+        border: 2px solid var(--light);
+        border-radius: 10px;
+        padding: 1em 3em 1em 1em;
+    }
+    input[data-id="search"]{
+        width: 400px;
+    }
+    .btn{
+        background-color: var(--light);
+        color: var(--dark);
+        padding: .9em;
+        position: absolute;
+        right: 0;
+        top: 2px;
+    }
+
 }

@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import '../css/reset.css';
 :root {
-  --light: #b0b0b0;
+  --light: #ffffff;
   --dark:#0d0f6d;
 }
 
@@ -46,6 +46,7 @@ body.dark {
 }
 .header > div .dark-mode {
   background-color: var(--red);
+  margin-left: 100px;
 }
 .header > div .dark-mode button {
   color: var(--light);
@@ -84,4 +85,38 @@ body.dark {
 }
 .header img {
   width: 170px;
+}
+
+.main {
+  margin-top: 2em;
+}
+.main > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.main .input {
+  position: relative;
+}
+.main input[data-id=search], .main .btn {
+  border: 2px solid var(--light);
+  border-radius: 10px;
+  padding: 1em 3em 1em 1em;
+}
+.main input[data-id=search] {
+  width: 400px;
+}
+.main .btn {
+  background-color: var(--light);
+  color: var(--dark);
+  padding: 0.9em;
+  position: absolute;
+  right: 0;
+  top: 2px;
 }/*# sourceMappingURL=style.min.css.map */
