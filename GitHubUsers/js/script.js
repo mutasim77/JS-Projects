@@ -9,8 +9,6 @@ const fetchData = async (url, username) => {
     return await res.json();
 }
 
-console.log(fetchData(API, 'mutasim77'));
-
 //! Dark Mode
 const buttonDark = document.querySelector('.dark-mode button');
 buttonDark.addEventListener('click', () => {
@@ -21,5 +19,14 @@ buttonDark.addEventListener('click', () => {
 //! Search Button
 const buttonSearch = document.querySelector('[data-action="search"]');
 buttonSearch.addEventListener('click', () => {
-    console.log("Hello");
+    const username = document.querySelector('[data-id="search"]').value.trim();
+    if (!username) {
+        console.log('ERROR');
+        return;
+    }
+    fetchData(API, username).then(res => {
+        console.log(res.name);
+    })
 });
+
+//! Create Cards
