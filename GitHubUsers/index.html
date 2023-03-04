@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitFinder</title>
+    <script src="https://kit.fontawesome.com/97543b6a54.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/css/style.min.css">
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/25/25231.png" type="image/x-icon">
 </head>
@@ -23,12 +24,51 @@
     <main class="main">
         <div class="container">
             <div class="input">
-                <input type="text" data-id="search">
+                <input type="text" data-id="search" placeholder="Search GitHub username...">
                 <button class="btn" data-action="search">Search</button>
             </div>
 
-            <div class="result">
-                hello
+            <div class="result flex">
+                <div class="left-side">
+                    <div class="profile-img">
+                        <img src="https://images.unsplash.com/photo-1527960669566-f882ba85a4c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YXdlc29tZSUyMHBpY3xlbnwwfHwwfHw%3D&w=1000&q=80"
+                            alt="">
+                    </div>
+                </div>
+                <div class="right-side">
+                    <!-- name info  -->
+                    <div class="flex">
+                        <div class="name">
+                            <h1>Mutasim</h1>
+                            <div class="username">@mutasim77</div>
+                        </div>
+                        <div class="date">Joined 21 Dec 2021</div>
+                    </div>
+                    <!-- bio  -->
+                    <div class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, dolore.</div>
+                    <!-- banner followers  -->
+                    <div class="banner-followers flex">
+                        <div class="flex flex-column">
+                            <div>Repository</div>
+                            <span>8</span>
+                        </div>
+                        <div class="flex flex-column">
+                            <div>Followers</div>
+                            <span>3938</span>
+                        </div>
+                        <div class="flex flex-column">
+                            <div>Following</div>
+                            <span>10</span>
+                        </div>
+                    </div>
+                    <!-- links   -->
+                    <div class="flex flex-wrap">
+                        <div class="location"><i class="fa-solid fa-location-dot"></i> Not Availalable</div>
+                        <div class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Not Availalable</div>
+                        <div class="company"><i class="fa-solid fa-building"></i> Not Availalable</div>
+                        <div class="website"><i class="fa-solid fa-link"></i> Not Availalable</div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

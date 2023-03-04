@@ -2,5 +2,18 @@ $font-poppins: 'Poppins', sans-serif;
 
 :root{
     --light: #ffffff;
-    --dark:#0d0f6d;
+    --dark:#131c2f;
+    --blue: #0079ff;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
 }
