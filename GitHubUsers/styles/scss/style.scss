@@ -119,10 +119,13 @@ body.dark{
 }
 
 .result{
-    max-width: 900px;
+    max-width: 700px;
     margin-top: 2em;
-    // background-color:var(--light);
-
+    background-color:#1f2a48;
+    padding: 2.5em;
+    border-radius: 20px;
+    gap: 50px;
+    
     .left-side{
         .profile-img{
             width: 150px;
