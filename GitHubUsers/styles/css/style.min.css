@@ -25,6 +25,22 @@
       flex-wrap: wrap;
 }
 
+.justify-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.align-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gap-5 {
+  gap: 10px;
+}
+
 body {
   background-color: var(--dark);
   color: var(--light);
@@ -127,7 +143,7 @@ body.dark {
 .main input[data-id=search], .main .btn {
   border: 2px solid var(--light);
   border-radius: 10px;
-  padding: 1em 3em 1em 1em;
+  padding: 0.7em 3em 0.7em 1em;
 }
 .main input[data-id=search] {
   width: 400px;
@@ -135,7 +151,7 @@ body.dark {
 .main .btn {
   background-color: var(--light);
   color: var(--dark);
-  padding: 0.9em;
+  padding: 0.6em;
   position: absolute;
   right: 0;
   top: 2px;
@@ -148,11 +164,14 @@ body.dark {
   padding: 2.5em;
   border-radius: 20px;
   gap: 50px;
+  color: #fff;
+  -webkit-box-shadow: -3px 3px 15px var(--light);
+          box-shadow: -3px 3px 15px var(--light);
 }
 .result .left-side .profile-img {
   width: 150px;
   height: 150px;
-  border: 2px solid var(--light);
+  border: 2px solid #fff;
   border-radius: 50%;
 }
 .result .left-side .profile-img img {
@@ -161,4 +180,40 @@ body.dark {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.result .right-side .name h1 {
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+.result .right-side .name .username {
+  margin-top: 0.5em;
+  font-size: 0.8em;
+  letter-spacing: 1.5px;
+}
+.result .right-side .name .username a {
+  color: var(--blue);
+}
+.result .right-side .date {
+  font-size: 0.9em;
+  color: #b0b0b0;
+}
+.result .right-side .bio {
+  margin: 2em 0;
+  color: #b9b5b5;
+  font-size: 0.9em;
+}
+.result .right-side .banner-followers {
+  background-color: #131c2f;
+  padding: 1em;
+  border-radius: 10px;
+  margin-bottom: 2em;
+}
+.result .right-side .banner-followers > div {
+  color: #b0b0b0;
+}
+.result .right-side .banner-followers > div > div {
+  font-weight: 600;
+}
+.result .right-side .banner-followers > div > span {
+  color: #fff;
 }/*# sourceMappingURL=style.min.css.map */
