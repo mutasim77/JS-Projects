@@ -128,6 +128,10 @@ body.dark{
     color: #fff;
     box-shadow: -3px 3px 15px var(--light);
 
+    &.hide{
+        display: none;
+    }
+
     .left-side{
         .profile-img{
             width: 150px;
@@ -187,11 +191,19 @@ body.dark{
             }
 
         }
-        .location {
-            .company {
-            }
-            .website {
-            }
-        }
+    }
+}
+
+.message{
+    margin-top: 2em;
+    text-align: center;
+    max-width: 600px;
+    background-color: var(--light);
+    color: var(--dark);
+    padding: .7em 1.3em;
+    border-radius: 11px;
+
+    &.hide{
+        display: none;
     }
 }
