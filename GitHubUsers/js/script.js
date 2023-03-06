@@ -5,6 +5,7 @@ const message = document.querySelector('.message');
 const fetchData = async (url, username) => {
     const res = await fetch(`${url}/${username}`);
     if (!res.ok) {
+        showMessage();
         throw new Error(`Could not fetch ${url}, status: ${res.status}`);
     }
     return await res.json();
@@ -33,7 +34,7 @@ buttonSearch.addEventListener('click', () => {
 //! Create Cards
 function showCards(data) {
     console.log(data);
-    const { avatar_url, html_url, name, company, location, twitter_username, public_repos, followers, following, created_at } = data;
+    const { avatar_url, login, html_url, name, company, location, twitter_username, public_repos, followers, following, created_at, bio, blog } = data;
     const bannerInfo = document.createElement('div');
     bannerInfo.classList.add('result');
     bannerInfo.classList.add('flex');
@@ -42,45 +43,45 @@ function showCards(data) {
         `
         <div class="left-side">
             <div class="profile-img">
-                <img src="https://images.unsplash.com/photo-1527960669566-f882ba85a4c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YXdlc29tZSUyMHBpY3xlbnwwfHwwfHw%3D&w=1000&q=80"
-                    alt="">
+                <img src="${avatar_url}"
+                    alt="${name}">
             </div>
         </div>
         <div class="right-side">
             <!-- name info  -->
             <div class="flex justify-between">
                 <div class="name">
-                    <h1>Mutasim</h1>
-                    <div class="username"><a href="#!">@mutasim77</a></div>
+                    <h1>${name}</h1>
+                    <div class="username"><a href="#!">@${login}</a></div>
                 </div>
-                <div class="date">Joined 21 Dec 2021</div>
+                <div class="date">Joined ${created_at}</div>
             </div>
             <!-- bio  -->
-            <div class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, dolore.</div>
+            <div class="bio">${bio}</div>
             <!-- banner followers  -->
             <div class="banner-followers flex justify-between">
                 <div class="flex flex-column">
                     <div>Repository</div>
-                    <span>8</span>
+                    <span>${public_repos}</span>
                 </div>
                 <div class="flex flex-column">
                     <div>Followers</div>
-                    <span>3938</span>
+                    <span>${followers}</span>
                 </div>
                 <div class="flex flex-column">
                     <div>Following</div>
-                    <span>10</span>
+                    <span>${following}</span>
                 </div>
             </div>
             <!-- links   -->
             <div class="flex justify-between">
                 <div class="flex flex-column gap-5">
-                    <div class="location"><i class="fa-solid fa-location-dot"></i> Not Availalable</div>
-                    <div class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Not Availalable</div>
+                    <div class="location"><i class="fa-solid fa-location-dot"></i> ${location}</div>
+                    <div class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i> ${twitter_username}</div>
                 </div>
                 <div class="flex flex-column gap-5">
-                    <div class="company"><i class="fa-solid fa-building"></i> Not Availalable</div>
-                    <div class="website"><i class="fa-solid fa-link"></i> Not Availalble</div>
+                    <div class="company"><i class="fa-solid fa-building"></i> ${company}</div>
+                    <div class="website"><i class="fa-solid fa-link"></i> ${blog}</div>
                 </div>
             </div>
         </div>

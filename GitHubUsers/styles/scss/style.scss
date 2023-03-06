@@ -119,7 +119,7 @@ body.dark{
 }
 
 .result{
-    max-width: 700px;
+    width: 700px;
     margin-top: 2em;
     background-color:#1f2a48;
     padding: 2.5em;
@@ -148,6 +148,7 @@ body.dark{
     }
 
     .right-side{
+        width: 100%;
         .name {
             h1{
                 font-size: 1.5em;
