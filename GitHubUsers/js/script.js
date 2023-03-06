@@ -2,7 +2,6 @@ const API = 'https://api.github.com/users';
 const message = document.querySelector('.message');
 const spinner = document.querySelector('.spinner');
 
-//? Sorry, we could not find any GitHub user with that username. Please try again with a different username.
 //! Fetch the Data
 const fetchData = async (url, username) => {
     deleteResult();
@@ -10,17 +9,14 @@ const fetchData = async (url, username) => {
     try {
         const res = await fetch(`${url}/${username}`);
         if (!res.ok) {
-            showMessage();
             throw new Error(`Could not fetch ${url}, status: ${res.status}`);
         }
         return await res.json();
-
     } catch (error) {
-        console.error(error);
+        showMessage();
     } finally {
         spinner.style.display = 'none';
     }
-
 }
 
 //! Dark Mode
@@ -35,6 +31,7 @@ const buttonSearch = document.querySelector('[data-action="search"]');
 buttonSearch.addEventListener('click', () => {
     const username = document.querySelector('[data-id="search"]').value.trim();
     if (!username) {
+        //! SHOW MESSAGE
         console.log('ERROR');
         return;
     }
@@ -46,6 +43,8 @@ buttonSearch.addEventListener('click', () => {
 
 //! Create Cards
 function showCards(data) {
+    if (!data) return;
+
     const { avatar_url, login, html_url, name, company, location, twitter_username, public_repos, followers, following, created_at, bio, blog } = data;
 
     const bannerInfo = document.createElement('div');
@@ -121,6 +120,7 @@ function showMessage() {
     message.textContent = 'Sorry, we could not find any GitHub user with that username. Please try again with a different username.';
 }
 
+//! Delete Results each time
 function deleteResult() {
     if (document.querySelector('.result')) {
         document.querySelector('.result').remove();
