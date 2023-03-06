@@ -1,14 +1,26 @@
 const API = 'https://api.github.com/users';
 const message = document.querySelector('.message');
+const spinner = document.querySelector('.spinner');
 
+//? Sorry, we could not find any GitHub user with that username. Please try again with a different username.
 //! Fetch the Data
 const fetchData = async (url, username) => {
-    const res = await fetch(`${url}/${username}`);
-    if (!res.ok) {
-        showMessage();
-        throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+    deleteResult();
+    spinner.style.display = 'block';
+    try {
+        const res = await fetch(`${url}/${username}`);
+        if (!res.ok) {
+            showMessage();
+            throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+        }
+        return await res.json();
+
+    } catch (error) {
+        console.error(error);
+    } finally {
+        spinner.style.display = 'none';
     }
-    return await res.json();
+
 }
 
 //! Dark Mode
@@ -27,14 +39,15 @@ buttonSearch.addEventListener('click', () => {
         return;
     }
     fetchData(API, username).then(res => {
+        deleteResult();
         showCards(res);
     })
 });
 
 //! Create Cards
 function showCards(data) {
-    console.log(data);
     const { avatar_url, login, html_url, name, company, location, twitter_username, public_repos, followers, following, created_at, bio, blog } = data;
+
     const bannerInfo = document.createElement('div');
     bannerInfo.classList.add('result');
     bannerInfo.classList.add('flex');
@@ -52,9 +65,9 @@ function showCards(data) {
             <div class="flex justify-between">
                 <div class="name">
                     <h1>${name}</h1>
-                    <div class="username"><a href="#!">@${login}</a></div>
+                    <div class="username"><a href="${html_url}" target="_blank">@${login}</a></div>
                 </div>
-                <div class="date">Joined ${created_at}</div>
+                <div class="date">Registered  ${formatDate((created_at.substring(0, 10)))}</div>
             </div>
             <!-- bio  -->
             <div class="bio">${bio}</div>
@@ -90,7 +103,12 @@ function showCards(data) {
     document.querySelector('.main > .container').appendChild(bannerInfo);
 }
 
-
+//! convert YYYY-MM-DD to String 
+function formatDate(dateString) {
+    const dateObj = new Date(dateString);
+    const options = { day: 'numeric', month: 'short', year: 'numeric' };
+    return dateObj.toLocaleDateString('en-GB', options);
+}
 
 //! hide message
 function hideMessage() {
@@ -100,4 +118,11 @@ function hideMessage() {
 //! show message
 function showMessage() {
     message.classList.remove('hide');
+    message.textContent = 'Sorry, we could not find any GitHub user with that username. Please try again with a different username.';
+}
+
+function deleteResult() {
+    if (document.querySelector('.result')) {
+        document.querySelector('.result').remove();
+    }
 }

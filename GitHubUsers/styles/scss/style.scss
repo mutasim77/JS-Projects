@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import '../css/reset.css';
 @import './variables';
+@import './spinner';
 
 body{
     background-color: var(--dark);
@@ -149,6 +150,7 @@ body.dark{
 
     .right-side{
         width: 100%;
+        
         .name {
             h1{
                 font-size: 1.5em;
@@ -195,6 +197,7 @@ body.dark{
     }
 }
 
+//? message
 .message{
     margin-top: 2em;
     text-align: center;
@@ -207,4 +210,9 @@ body.dark{
     &.hide{
         display: none;
     }
+}
+
+//? spinner
+.spinner{
+    display: none;
 }

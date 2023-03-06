@@ -12,6 +12,8 @@
 </head>
 
 <body>
+
+    <!-- header  -->
     <header class="header">
         <div class="container">
             <div class="logo"><img src="img/logo.png" alt="Logo"></div>
@@ -21,66 +23,74 @@
             </div>
         </div>
     </header>
+
+    <!-- main  -->
     <main class="main">
         <div class="container">
-
             <div class="input">
                 <input type="text" data-id="search" placeholder="Search GitHub username...">
                 <button class="btn" data-action="search">Search</button>
             </div>
-
-            <div class="result flex hie">
-                <div class="left-side">
-                    <div class="profile-img">
-                        <img src="https://images.unsplash.com/photo-1527960669566-f882ba85a4c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YXdlc29tZSUyMHBpY3xlbnwwfHwwfHw%3D&w=1000&q=80"
-                            alt="">
-                    </div>
-                </div>
-                <div class="right-side">
-                    <!-- name info  -->
-                    <div class="flex justify-between">
-                        <div class="name">
-                            <h1>Mutasim</h1>
-                            <div class="username"><a href="#!">@mutasim77</a></div>
-                        </div>
-                        <div class="date">Joined 21 Dec 2021</div>
-                    </div>
-                    <!-- bio  -->
-                    <div class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, dolore.</div>
-                    <!-- banner followers  -->
-                    <div class="banner-followers flex justify-between">
-                        <div class="flex flex-column">
-                            <div>Repository</div>
-                            <span>8</span>
-                        </div>
-                        <div class="flex flex-column">
-                            <div>Followers</div>
-                            <span>3938</span>
-                        </div>
-                        <div class="flex flex-column">
-                            <div>Following</div>
-                            <span>10</span>
-                        </div>
-                    </div>
-                    <!-- links   -->
-                    <div class="flex justify-between">
-                        <div class="flex flex-column gap-5">
-                            <div class="location"><i class="fa-solid fa-location-dot"></i> Not Availalable</div>
-                            <div class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Not Availalable</div>
-                        </div>
-                        <div class="flex flex-column gap-5">
-                            <div class="company"><i class="fa-solid fa-building"></i> Not Availalable</div>
-                            <div class="website"><i class="fa-solid fa-link"></i> Not Availalble</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="message hide">
+            <div class="message">
                 Simply enter the username of the GitHub user you are looking for in the search bar above and hit ENTER.
             </div>
         </div>
     </main>
+
+    <!-- spinner  -->
+    <div class="spinner hide">
+        <div class="container">
+            <div class="box-of-star1">
+                <div class="star star-position1"></div>
+                <div class="star star-position2"></div>
+                <div class="star star-position3"></div>
+                <div class="star star-position4"></div>
+                <div class="star star-position5"></div>
+                <div class="star star-position6"></div>
+                <div class="star star-position7"></div>
+            </div>
+            <div class="box-of-star2">
+                <div class="star star-position1"></div>
+                <div class="star star-position2"></div>
+                <div class="star star-position3"></div>
+                <div class="star star-position4"></div>
+                <div class="star star-position5"></div>
+                <div class="star star-position6"></div>
+                <div class="star star-position7"></div>
+            </div>
+            <div class="box-of-star3">
+                <div class="star star-position1"></div>
+                <div class="star star-position2"></div>
+                <div class="star star-position3"></div>
+                <div class="star star-position4"></div>
+                <div class="star star-position5"></div>
+                <div class="star star-position6"></div>
+                <div class="star star-position7"></div>
+            </div>
+            <div class="box-of-star4">
+                <div class="star star-position1"></div>
+                <div class="star star-position2"></div>
+                <div class="star star-position3"></div>
+                <div class="star star-position4"></div>
+                <div class="star star-position5"></div>
+                <div class="star star-position6"></div>
+                <div class="star star-position7"></div>
+            </div>
+            <div class="astronaut" data-js="astro">
+                <div class="head"></div>
+                <div class="arm arm-left"></div>
+                <div class="arm arm-right"></div>
+                <div class="body">
+                    <div class="panel"></div>
+                </div>
+                <div class="leg leg-left"></div>
+                <div class="leg leg-right"></div>
+                <div class="schoolbag"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- script  -->
     <script src="js/script.js"></script>
 </body>
 
