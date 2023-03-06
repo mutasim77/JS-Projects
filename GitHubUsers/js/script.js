@@ -126,3 +126,7 @@ function deleteResult() {
         document.querySelector('.result').remove();
     }
 }
+
+
+//! MESSAGE FOR EMPTY USERNAME
+//! FIXING NULLS TO NOT AVAILABLE FROM DATA
