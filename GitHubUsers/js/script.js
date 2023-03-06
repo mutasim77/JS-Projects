@@ -33,6 +33,7 @@ buttonSearch.addEventListener('click', () => {
 //! Create Cards
 function showCards(data) {
     console.log(data);
+    const { avatar_url, html_url, name, company, location, twitter_username, public_repos, followers, following, created_at } = data;
     const bannerInfo = document.createElement('div');
     bannerInfo.classList.add('result');
     bannerInfo.classList.add('flex');
