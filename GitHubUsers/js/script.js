@@ -56,7 +56,7 @@ function showCards(data) {
         <div class="left-side">
             <div class="profile-img">
                 <img src="${avatar_url}"
-                    alt="${name}">
+                    alt="${name}" data-id="profile-picture">
             </div>
         </div>
         <div class="right-side">
@@ -131,6 +131,34 @@ function deleteResult() {
 function notAvailable(str) {
     return str ? str : 'Not Available';
 }
+
+//! Modal window for picture
+const modal = document.querySelector('.modal-window');
+
+function openModal() {
+    modal.classList.remove('hide');
+}
+
+function closeModal() {
+    modal.classList.add('hide');
+}
+
+//! Open Modal by clicking on picture
+document.addEventListener('click', (evt) => {
+    const target = evt.target.dataset.id;
+    if (target === 'profile-picture') {
+        openModal();
+        modal.classList.remove('hide');
+    }
+});
+
+//! Close Modal by clicking on picture
+modal.addEventListener('click', (evt) => {
+    const target = evt.target.dataset.id;
+    if (target !== 'modal-picture') {
+        closeModal();
+    }
+});
 
 
 //! MESSAGE FOR EMPTY USERNAME
