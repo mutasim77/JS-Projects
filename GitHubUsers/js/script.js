@@ -63,13 +63,13 @@ function showCards(data) {
             <!-- name info  -->
             <div class="flex justify-between">
                 <div class="name">
-                    <h1>${name}</h1>
+                    <h1>${name ? name : 'No name'}</h1>
                     <div class="username"><a href="${html_url}" target="_blank">@${login}</a></div>
                 </div>
                 <div class="date">Registered  ${formatDate((created_at.substring(0, 10)))}</div>
             </div>
             <!-- bio  -->
-            <div class="bio">${bio}</div>
+            <div class="bio">${bio ? bio : 'No bio...'}</div>
             <!-- banner followers  -->
             <div class="banner-followers flex justify-between">
                 <div class="flex flex-column">
@@ -88,12 +88,12 @@ function showCards(data) {
             <!-- links   -->
             <div class="flex justify-between">
                 <div class="flex flex-column gap-5">
-                    <div class="location"><i class="fa-solid fa-location-dot"></i> ${location}</div>
-                    <div class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i> ${twitter_username}</div>
+                    <div class="location"><i class="fa-solid fa-location-dot"></i> ${notAvailable(location)}</div>
+                    <div class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i> ${notAvailable(twitter_username)}</div>
                 </div>
                 <div class="flex flex-column gap-5">
-                    <div class="company"><i class="fa-solid fa-building"></i> ${company}</div>
-                    <div class="website"><i class="fa-solid fa-link"></i> ${blog}</div>
+                    <div class="company"><i class="fa-solid fa-building"></i> ${notAvailable(company)}</div>
+                    <div class="website"><i class="fa-solid fa-link"></i> ${notAvailable(blog)}</div>
                 </div>
             </div>
         </div>
@@ -125,6 +125,11 @@ function deleteResult() {
     if (document.querySelector('.result')) {
         document.querySelector('.result').remove();
     }
+}
+
+//! Data not available
+function notAvailable(str) {
+    return str ? str : 'Not Available';
 }
 
 
