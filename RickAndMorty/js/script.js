@@ -59,15 +59,12 @@ function showAllCharacters(arr) {
 }
 
 //! Save favoriter characters
-const objFavChars = {};
 function favCharacters(picture, name) {
     const circle = document.createElement('div');
     circle.classList.add('circle');
     circle.innerHTML = `<img src="${picture}" alt="${name}">`;
 
     document.querySelector('#favorites').appendChild(circle);
-    objFavChars[name] = picture;
-    localStorage.setItem('data', JSON.stringify(objFavChars));
 }
 
 //! Delete favorite characters
@@ -133,19 +130,6 @@ buttonDark.addEventListener('click', () => {
     buttonDark.classList.toggle('dark');
     document.body.classList.toggle('dark');
 });
-
-let dataLocalStorage = null;
-//! Save in localstorage
-if (sessionStorage.getItem("is_reloaded")) {
-    dataLocalStorage = localStorage.getItem('data');
-};
-sessionStorage.setItem("is_reloaded", true);
-
-const savedChars = JSON.parse(dataLocalStorage);
-for (let [key, value] of Object.entries(savedChars)) {
-    console.log(key);
-    favCharacters(key, value);
-}
 
 //! Run Aos Animations
 AOS.init();
