@@ -38,7 +38,23 @@ buttonSearch.addEventListener('click', () => {
     fetchData(API, username).then(res => {
         deleteResult();
         showCards(res);
-    })
+    });
+});
+
+//! Seach by Enter key
+document.querySelector('[data-id="search"]').addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        const username = document.querySelector('[data-id="search"]').value.trim();
+        if (!username) {
+            //! SHOW MESSAGE
+            console.log('ERROR');
+            return;
+        }
+        fetchData(API, username).then(res => {
+            deleteResult();
+            showCards(res);
+        });
+    }
 });
 
 //! Create Cards
@@ -159,7 +175,3 @@ modal.addEventListener('click', (evt) => {
         closeModal();
     }
 });
-
-
-//! MESSAGE FOR EMPTY USERNAME
-//! FIXING NULLS TO NOT AVAILABLE FROM DATA
