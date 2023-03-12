@@ -43,6 +43,8 @@ I hope that these projects will be helpful for others who are also learning Java
 - <a href="https://github.com/mutasim77/JS-Projects/tree/main/MathGame">Math Game</a>
 <img width="900" alt="Screen Shot 2023-01-11 at 8 00 26 AM" src="https://user-images.githubusercontent.com/96326525/211700576-e010b001-bd53-42fa-9314-d4f998b6992f.png">
 
+- <a href="https://github.com/mutasim77/JS-Projects/tree/main/RickAndMorty">Rick And Morty</a>
+<img width="900" alt="Screen Shot 2023-03-12 at 6 16 39 PM" src="https://user-images.githubusercontent.com/96326525/224544048-e30b1769-135e-4306-9946-b2843a81fbc1.png">
 
 
 
