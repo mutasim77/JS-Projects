@@ -28,11 +28,6 @@ I hope that these projects will be helpful for others who are also learning Java
 - <a href="https://github.com/mutasim77/JS-Projects/tree/main/checkPalindrome">Check Palindrome</a>
 <img width="900" alt="Screen Shot 2023-01-10 at 5 35 40 PM" src="https://user-images.githubusercontent.com/96326525/211541841-874ca602-465d-40f3-8a12-2f4f988e3c88.png">
 
-- <a href="https://github.com/mutasim77/JS-Projects/tree/main/FormLogin">Form Login</a>
-<div style="display: flex;">  
-<img width="420" alt="Screen Shot 2023-01-10 at 5 37 00 PM" src="https://user-images.githubusercontent.com/96326525/211542132-ea467131-f817-4045-b118-adfd5f63d98f.png">
-<img width="420" alt="Screen Shot 2023-01-10 at 5 37 18 PM" src="https://user-images.githubusercontent.com/96326525/211542147-2e49014e-b042-4b00-be00-4a838d3a3d3e.png">
-</div>
 
 - <a href="https://github.com/mutasim77/JS-Projects/tree/main/Clock">Clock</a>
 <img width="900" alt="Screen Shot 2023-01-10 at 5 39 49 PM" src="https://user-images.githubusercontent.com/96326525/211542555-8596fcad-8c5a-4ca1-95e4-86194a79773c.png">
