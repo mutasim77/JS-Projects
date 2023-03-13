@@ -41,6 +41,10 @@ I hope that these projects will be helpful for others who are also learning Java
 - <a href="https://github.com/mutasim77/JS-Projects/tree/main/RickAndMorty">Rick And Morty</a>
 <img width="900" alt="Screen Shot 2023-03-12 at 6 16 39 PM" src="https://user-images.githubusercontent.com/96326525/224544048-e30b1769-135e-4306-9946-b2843a81fbc1.png">
 
+- <a href="https://github.com/mutasim77/JS-Projects/tree/main/GitHubUsers">GitHubUsers</a>
+<img width="900" alt="Screen Shot 2023-03-13 at 10 18 07 AM" src="https://user-images.githubusercontent.com/96326525/224607289-c3e0fdf2-7a8c-4b6d-a413-58de4e52adb3.png">
+
+
 
 
 
