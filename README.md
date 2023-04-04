@@ -46,4 +46,3 @@ I hope that these projects will be helpful for others who are also learning Java
 
 - <a href="https://github.com/mutasim77/JS-Projects/tree/main/PokemonApp">Pokemon</a>
 <img width="900" alt="Screen Shot 2023-03-14 at 11 18 55 AM" src="https://user-images.githubusercontent.com/96326525/224904129-6eaa9405-0d8d-465f-91c1-7aede0b59a9b.png">
-
